@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Jonathan Chang's Website Playground</title>
+    <link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(window).scroll(function(){
+            if ( $('div.wrapper').width() >= 660 ) {
+                if ( $(this).scrollTop() > pos.top+header.height() && header.hasClass('default') ) {
+                    header.fadeOut('fast', function(){
+                        $(this).removeClass('default').addClass('scrolling').fadeIn('fast');
+                    });
+                } else if ( $(this).scrollTop() <= pos.top+header.height() && header.hasClass('scrolling') ) {
+                    header.fadeOut('fast', function(){
+                        $(this).removeClass('scrolling').addClass('default').fadeIn('fast');
+                    });
+                }
+            }
+        });
+    </script>
+</head>
+<body class="content_wrapper">
+    <!-- The Header for the Site -->
+    <div id="header" class="wrapper">
+        <a href="index.html" class="wrapper" >shiro</a>
+        <div id="logo" class="wrapper">
+            Dmitri's Web PlayGround
+        </div>
+        <div id="menu_bar">
+            <ul id="menu">
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="happy.html">happy</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Info</a></li>
+                <li><a href="links.html">Random Links</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main_wrapper">
+        <div id="main_body">
+            
+        </div>
+    </div>
+
+    <div id="footer" class="wrapper">
+        <div id="footer_bar" class="wrapper">
+        </div>
+    </div>
+</body>
+</html>
+
