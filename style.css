@@ -69,8 +69,12 @@ ul#menu {
 }
 
 #menu a:hover {
-    background: rgb(222, 86, 53);
-    color:rgb(255, 255, 255);
+    background: rgb(80,70,72);
+    color: rgb(255, 255, 255);
+
+    -moz-box-shadow:    inset 0 0 15px #000000;
+    -webkit-box-shadow: inset 0 0 15px #000000;
+    box-shadow: inset 0 0 15px #000000;
 }
 
 #menu .current {
