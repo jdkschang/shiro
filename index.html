@@ -5,20 +5,52 @@
     <title>Jonathan Chang's Website Playground</title>
     <link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
     <link href="css/shiro.css" rel="stylesheet" type="text/css" media="screen" />
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    
     <script type="text/javascript">
+        $(function() {
+            $(window).scroll( function() {
+                var y_scroll_pos = window.pageYOffset;
+                // scroll top arrow
+                var top_marker = 150;
+                // activates when header is fixed
+                var fixedHeader = $('.fixedheader');
+
+                if (y_scroll_pos > top_marker) {
+                    var top = 0;
+
+                    fixedHeader.css({
+                        position: 'fixed',
+                        top: top + 'px',
+                        left: 0 + 'px',
+                        right: 0 + 'px',
+
+                    });
+
+                    // displays scroll top arrow
+                    $('#scrollup').css("display", "block");
+                }
+                else if (y_scroll_pos < top_marker) {
+                    fixedHeader.css({
+                        position: 'static',
+                        top: ''
+                    });
+
+                    // removes scroll top arrow
+                    $('#scrollup').css("display", "none");
+                }
+            });
+        });
     </script>
 </head>
 <body class="content_wrapper">
     <!-- The Header for the Site -->
     <div id="header" class="wrapper">
         <a href="index.html" class="wrapper" >shiro</a>
-        <div id="logo" class="wrapper">
+        <div id="logo" class="wrapper head_description">
             Dmitri's Web PlayGround
         </div>
-        <nav id="menu_bar">
+        <nav id="menu_bar" class="fixedheader">
             <ul id="menu">
                 <li class="current"><a href="index.html">Home</a></li>
                 <li><a href="happy.html">happy</a></li>
@@ -31,7 +63,7 @@
 
     <div id="main_wrapper">
         <div id="main_body">
-            
+            <a href="#top" id="scrollup"></a>
         </div>
     </div>
 
