@@ -1,114 +1,8 @@
-@-webkit-keyframes fadeInLeft {
-    0% {
-        opacity:0;
-        -webkit-transform:translateX(-20px);
-    }
-    100% {
-        opacity:1;
-        -webkit-transform:translateX(0);
-    }
-}
-@-moz-keyframes fadeInLeft {
-    0% {
-        opacity:0;
-        -moz-transform:translateX(-20px);
-    }
-    100% {
-        opacity:1;
-        -moz-transform:translateX(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    0% {
-        opacity:0;
-        transform:translateX(-20px);
-    }
-    100% {
-        opacity:1;
-        transform:translateX(0);
-    }
-}
-
-@-webkit-keyframes fadeInDown {
-    0% {
-        opacity:0;
-        -webkit-transform:translateY(-40px);
-    }
-    100% {
-        opacity:1;
-        -webkit-transform:translateY(0);
-    }
-}
-@-moz-keyframes fadeInDown {
-    0% {
-        opacity:0;
-        -moz-transform:translateY(-40px);
-    }
-    100% {
-        opacity:1;
-        -moz-transform:translateY(0);
-    }
-}
-
-@keyframes fadeInDown {
-    0% {
-        opacity:0;
-        transform:translateY(-40px);
-    }
-    100% {
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@-webkit-keyframes scrollFadeIn {
-    0% {
-        opacity:0;
-        -webkit-transform:translateY(20px);
-    }
-    100% {
-        opacity:0.7;
-        -webkit-transform:translateY(0);
-    }
-}
-
-@-moz-keyframes scrollFadeIn {
-    0% {
-        opacity:0;
-        -webkit-transform:translateY(20px);
-    }
-    100% {
-        opacity:0.7;
-        -webkit-transform:translateY(0);
-    }
-}
-
-@keyframes scrollFadeIn {
-    0% {
-        opacity:0;
-        -webkit-transform:translateY(20px);
-    }
-    100% {
-        opacity:0.7;
-        -webkit-transform:translateY(0);
-    }
-}
-
-@-webkit-keyframes fontShrink {
-    0% {
-        -webkit-transform:scale(1.0, 1.0);
-        -webkit-transform:translateX(0);
-    }
-    /*
-    50% {
-        font-size: 100px;
-    }
-    */
-    100% {
-        -webkit-transform:scale(0.5, 0.5);
-        -webkit-transform:translateX(-140px);
-    }
+@font-face {
+    font-family: 'Oxygen';
+    src: url('fonts/Oxygen-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .head_title {
@@ -141,11 +35,6 @@
     -webkit-animation-name: fadeInLeft;
     -moz-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
-}
-
-* {
-    margin: 0px;
-    padding: 0px;
 }
 
 /* testing height for scroll purposes*/
@@ -291,4 +180,117 @@ ul#menu {
 
 #footer_bar {
     color: rgb(255, 255, 255);
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity:0;
+        -webkit-transform:translateX(-20px);
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:translateX(0);
+    }
+}
+@-moz-keyframes fadeInLeft {
+    0% {
+        opacity:0;
+        -moz-transform:translateX(-20px);
+    }
+    100% {
+        opacity:1;
+        -moz-transform:translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity:0;
+        transform:translateX(-20px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity:0;
+        -webkit-transform:translateY(-40px);
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:translateY(0);
+    }
+}
+@-moz-keyframes fadeInDown {
+    0% {
+        opacity:0;
+        -moz-transform:translateY(-40px);
+    }
+    100% {
+        opacity:1;
+        -moz-transform:translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@-webkit-keyframes scrollFadeIn {
+    0% {
+        opacity:0;
+        -webkit-transform:translateY(20px);
+    }
+    100% {
+        opacity:0.7;
+        -webkit-transform:translateY(0);
+    }
+}
+
+@-moz-keyframes scrollFadeIn {
+    0% {
+        opacity:0;
+        -webkit-transform:translateY(20px);
+    }
+    100% {
+        opacity:0.7;
+        -webkit-transform:translateY(0);
+    }
+}
+
+@keyframes scrollFadeIn {
+    0% {
+        opacity:0;
+        -webkit-transform:translateY(20px);
+    }
+    100% {
+        opacity:0.7;
+        -webkit-transform:translateY(0);
+    }
+}
+
+@-webkit-keyframes fontShrink {
+    0% {
+        -webkit-transform:scale(1.0, 1.0);
+        -webkit-transform:translateX(0);
+    }
+    /*
+    50% {
+        font-size: 100px;
+    }
+    */
+    100% {
+        -webkit-transform:scale(0.5, 0.5);
+        -webkit-transform:translateX(-140px);
+    }
 }
