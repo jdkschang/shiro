@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="css/shiro.css">
 
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/libs/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
         $(function() {
             $(window).scroll( function() {
@@ -52,33 +51,37 @@
         });
     </script>
 </head>
-<body class="content_wrapper">
-    <!-- The Header for the Site -->
-    <div id="header" class="wrapper">
-        <a href="index.html" class="wrapper" >shiro</a>
-        <div id="logo" class="wrapper head_description">
-            Dmitri's Web PlayGround
-        </div>
-        <nav id="menu_bar" class="fixedheader">
-            <ul id="menu">
-                <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="happy.html">happy</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Info</a></li>
-                <li><a href="links.html">Random Links</a></li>
-            </ul>
-        </nav>
+<body>
+    <div id="header-container">
+        <header class="wrapper clearfix">
+            <h1 id="title"><a href="index.html" class="wrapper" >jon ks chang</a></h1>
+            <!--
+            <div id="logo" class="wrapper head_description">
+                Dmitri's Web PlayGround
+            </div>
+            -->
+            <nav>
+                <ul>
+                    <li><a href="happy.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
 
-    <div id="main_wrapper">
-        <div id="main_body">
+    <div id="main-container">
+        <div id="main" class="wrapper clearfix">
             <a href="#top" id="scrollup"></a>
+            <article>
+            </article>
         </div>
     </div>
 
-    <div id="footer" class="wrapper">
-        <div id="footer_bar" class="wrapper">
-        </div>
+    <div id="footer-container">
+        <footer class="wrapper">
+            <h3>footer</h3>
+        </footer>
     </div>
 </body>
 </html>
