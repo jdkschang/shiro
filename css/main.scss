@@ -1,1 +1,11 @@
-@import normalize;
+// Base
+@import "base/normalize";
+
+// config
+@import "helpers/config";
+
+// Layout
+@import "modules/header";
+
+// Pages
+@import "pages/home";

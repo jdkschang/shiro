@@ -12,13 +12,13 @@
     <meta name="author" content="Jonathan Chang">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/shiro.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
     <script src="js/libs/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
         $(function() {
+            initHoverBoxes();
             $(window).scroll( function() {
                 var y_scroll_pos = window.pageYOffset;
                 // scroll top arrow
@@ -49,6 +49,21 @@
                 }
             });
         });
+
+        function initHoverBoxes() {
+          var $column = $('.column');
+
+          $column.mouseenter(function() {
+            $column.removeClass('wide');
+            $column.css('width', '15%');
+            $(this).addClass('wide');
+          });
+
+          $column.mouseleave(function() {
+            $column.css('width', '20%');
+            $column.removeClass('wide');
+          });
+        }
     </script>
 </head>
 <body>
@@ -69,10 +84,15 @@
         <div id="main" class="wrapper clearfix">
             <a href="#top" id="scrollup"></a>
             <article>
-                <header>
-                    <h1>Content I</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                </header>
+                <div id="red" class="column">
+                    <p>Hello there.</p>
+                </div>
+                <div id="orange" class="column">
+                    <p>If you hover</p>
+                </div>
+                <div id="yellow" class="column">
+                    <p>over each section</p>
+                </div>
             </article>
         </div>
     </div>

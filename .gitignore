@@ -1,0 +1,6 @@
+# shiro 
+# ignore the files below
+.sass-cache/
+encore/
+node/
+.idea/

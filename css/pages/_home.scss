@@ -1,0 +1,42 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.column {
+  width: 20%;
+  padding: 2%;
+  height: 100%;
+  float: left;
+  margin: 0;
+  transition: all 0.5s ease;
+  &.wide {
+    width: 40%!important;
+  }
+  &#red {
+    background: #F25648;
+  }
+  &#orange {
+    background: #FC7B16;
+  }
+  &#yellow {
+    background: #FEE532;
+  }
+  &:hover {
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+p {
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
