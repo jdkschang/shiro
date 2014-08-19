@@ -1,6 +1,3 @@
-# shiro 
+# shirou
 # ignore the files below
-.sass-cache/
-encore/
-node/
-.idea/
+rootkey.csv

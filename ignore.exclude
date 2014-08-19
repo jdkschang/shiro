@@ -1,0 +1,10 @@
+# excluding .git/ directory and scss files
+.git/*
+.gitignore
+backbonejs/*
+*.scss
+rootkey.csv
+server.js
+
+# meta
+ignore.exclude
