@@ -1,0 +1,122 @@
+/* redesign css */
+
+#header
+{
+}
+    /* decorator 4 blue */
+    #header-wrapper {
+      background: #2b92b9;
+    }
+
+    /* give some padding so its not flush left */
+    #ucsd-link {
+      left: 20px;
+    }
+
+#sidebar-nav
+{
+}
+    /* off-white ucsdnews uses */
+    #nav-wrapper {
+      background: #fafafa;
+      height: 379px;
+    }
+
+    /*
+     * removing gradient
+     * border same color
+     * shift nav to eliminate whitespace
+     */
+    #nav-bar {
+      background-color: #2b92b9;
+      background-image: none;
+
+      border: 6px solid #2b92b9;
+      border-top: 0;
+      top: -1px;
+    }
+
+    /*
+     * border color similar to ucsdnews
+     * removed top padding
+     */
+
+    #nav-list {
+      padding: 0;
+    }
+        #nav-list li {
+          border-bottom: solid 1px #2682a4;
+
+          padding: 4px 0;
+        }
+            /* make subnav relatively inline with main nav li*/
+            #nav-list li li {
+              padding: 5px 0 4px;
+            }
+
+    /* hover color aligning with ucsdnews */
+    .sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+      background: #217190;
+    }
+
+#body
+{
+}
+    /* off-white background ucsd-news */
+    #home-body #content-wrapper {
+      background: #fafafa;
+    }
+
+    /* changing news and events styling */
+    .section-title {
+      margin: 12px 0 0;
+      height: 50px;
+      background: #ef7000;
+    }
+        /*
+         * changing font color to match background
+         * font size to mimic ucsdnews sectioned headers
+         * padding left so its not flush with the background
+         */
+        .section-title h2 {
+          color: #fafafa;
+          font-size: 60px;
+          padding: 0 20px;
+
+          background: none;
+          margin: 0;
+          top: 21px;
+        }
+
+        /*
+         * formatting of the arrow link
+         * create a visual 1px border showing separation
+         */
+        .section-title p.more {
+          text-align: center;
+          float: right;
+
+          height: 100%;
+          width: 75px;
+
+          font-size: 70px;
+          border-left: 1px solid #fafafa;
+
+          margin: 0;
+        }
+
+        /*
+         * font color to match background
+         * remove underline on link
+         */
+        .section-title p a {
+          color: #fafafa;
+          text-decoration: none;
+        }
+
+#footer
+{
+}
+    #footer-wrapper {
+      background: #2b92b9;
+    }

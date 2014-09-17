@@ -1,3 +1,5 @@
 # shirou
 # ignore the files below
 rootkey.csv
+.sass-cache/
+
