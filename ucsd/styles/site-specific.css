@@ -31,7 +31,15 @@ table.table td.tbl-description input {
     width:100%;
 }
 
-table.table td.tbl-perminfo {
-    text-align: center;
-    font-weight: bold;
+.drawer
+{
+    width: 1100px;
 }
+    .drawer h2 {
+         text-align: center;
+    }
+
+    .drawer ul li {
+        list-style: none;
+        display: inline-block;
+    }
