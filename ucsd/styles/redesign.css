@@ -3,9 +3,15 @@
 #header
 {
 }
-    /* decorator 4 blue */
+    /*
+     * decorator 4 blue
+     * shadow on header to mimic ucsdnews
+     * z-index to show shadow
+     */
     #header-wrapper {
       background: #2b92b9;
+      box-shadow: 0 1px 5px #444;
+      z-index: 99999;
     }
 
     /* give some padding so its not flush left */
