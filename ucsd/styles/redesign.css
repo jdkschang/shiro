@@ -1,5 +1,12 @@
 /* redesign css */
 
+/* whitney clean thin font */
+@font-face {
+    font-family: 'Whitney';
+    src: url(../fonts/whitney-book.woff) format('woff'),
+         url(../fonts/whitney-book.ttf) format('truetype');
+}
+
 #header
 {
 }
@@ -156,13 +163,16 @@
          * padding left so its not flush with the background
          */
         .section-title h2 {
-          color: #fafafa;
-          font-size: 44px;
-          padding: 0 20px;
+            color: #fafafa;
+            font-family: Whitney;
+            font-weight: 100;
+            font-size: 44px;
 
-          background: none;
-          margin: 0;
-          top: 27px;
+
+            background: none;
+            padding: 0 20px;
+            margin: 0;
+            top: 25px;
         }
 
         /*
