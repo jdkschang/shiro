@@ -213,74 +213,117 @@
                                     <td colspan="8" class="tbl-description"><input type="text" placeholder="current description of funds"></td>
                                 </tr>
                             </table>
-                            <div class="drawer">
+                        </div>
 
-                                <h2><a href="#">Permanent Description</a></h2>
+                        <!--DRAWER SECTION-->
+                        <!--PERMAANENT TEMPLATE INSERTED HERE-->
+                        <div class="drawer">
 
-                                <ul>
-                                    <li>
-                                        <label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>
-                                        <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
-                                            <option value="0 - Local Campus">0 - Local Campus</option>
-                                            <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <label for="subCampusCode" class="sr-only">Sub Campus Code</label>
-                                        <select id="subCampusCode" class="form-control" name="subCampusCode">
-                                            <option value="1 - General Campus">1 - General Campus</option>
-                                            <option value="2 - Health Sciences">2 - Health Sciences</option>
-                                            <option value="3 - Marine Sciences">3 - Marine Sciences</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <label for="transactionClassCode" class="sr-only">Transaction Class Code</label>
-                                        <select id="transactionClassCode" class="form-control" name="transactionClassCode">
-                                            <option value="A - Adjustment">A - Adjustment</option>
-                                            <option value="I - Increment">I - Increment</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <label for="transactionTypeCode" class="sr-only">Transaction Type Code</label>
-                                        <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
-                                            <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
-                                            <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
-                                            <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
-                                            <option value="4 - Academic Merit">4 - Academic Merit</option>
-                                            <option value="5 - Staff Merit">5 - Staff Merit</option>
-                                            <option value="6 - Academic Range">6 - Academic Range</option>
-                                            <option value="7 - Staff Range">7 - Staff Range</option>
-                                            <option value="8 - Reclassification">8 - Reclassification</option>
-                                            <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
-                                            <option value="B - Other">B - Other</option>
-                                            <option value="A - Salary Turnover">A - Salary Turnover</option>
-                                            <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
-                                        </select>
-                                    </li>
+                            <h2><a href="#">Permanent Description</a></h2>
 
-                                    <li>
-                                        <label for="fteAmount" class="sr-only">FTE Amount</label>
-                                        <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
-                                    </li>
-                                    <li>
-                                        <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
-                                        <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
-                                    </li>
-                                    <li>
-                                        <label for="permanentAmount" class="sr-only">Permanent Amount</label>
-                                        <input type="email" class="form-control" id="permanentAmount" placeholder="FTE Amount">
-                                    </li>
-                                    <li>
-                                        <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
-                                        <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
-                                    </li>
-                                    <li>
-                                        <label for="permanentDescription" class="sr-only">Permanent Description</label>
-                                        <input type="text" class="form-control" id="permanentDescription" placeholder="  Permanent Description">
-                                    </li>
-                                </ul>
+                            <ul>
+                                <li id="permTempPosition">
+                                    <label for="permanentTemplate" class="sr-only">Permanent Template</label>
+                                    <select id="permanentTemplate" class="form-control" name="currentTemplate">
+                                        <option value="" disabled selected>Permnt Template</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>
+                                    <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
+                                        <option value="0 - Local Campus">0 - Local Campus</option>
+                                        <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="subCampusCode" class="sr-only">Sub Campus Code</label>
+                                    <select id="subCampusCode" class="form-control" name="subCampusCode">
+                                        <option value="1 - General Campus">1 - General Campus</option>
+                                        <option value="2 - Health Sciences">2 - Health Sciences</option>
+                                        <option value="3 - Marine Sciences">3 - Marine Sciences</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="transactionClassCode" class="sr-only">Transaction Class Code</label>
+                                    <select id="transactionClassCode" class="form-control" name="transactionClassCode">
+                                        <option value="A - Adjustment">A - Adjustment</option>
+                                        <option value="I - Increment">I - Increment</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="transactionTypeCode" class="sr-only">Transaction Type Code</label>
+                                    <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
+                                        <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
+                                        <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
+                                        <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
+                                        <option value="4 - Academic Merit">4 - Academic Merit</option>
+                                        <option value="5 - Staff Merit">5 - Staff Merit</option>
+                                        <option value="6 - Academic Range">6 - Academic Range</option>
+                                        <option value="7 - Staff Range">7 - Staff Range</option>
+                                        <option value="8 - Reclassification">8 - Reclassification</option>
+                                        <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
+                                        <option value="B - Other">B - Other</option>
+                                        <option value="A - Salary Turnover">A - Salary Turnover</option>
+                                        <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
+                                    </select>
+                                </li>
 
-                            </div>
+                                <li>
+                                    <label for="fteAmount" class="sr-only">FTE Amount</label>
+                                    <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
+                                </li>
+                                <li>
+                                    <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
+                                    <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
+                                </li>
+                                <li>
+                                    <label for="permanentAmount" class="sr-only">Permanent Amount</label>
+                                    <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
+                                </li>
+                                <li>
+                                    <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
+                                    <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
+                                </li>
+                                <li>
+                                    <label for="permanentDescription" class="sr-only">Permanent Description</label>
+                                    <input type="text" class="form-control" id="permanentDescription" placeholder="  Permanent Description">
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <!--Total Transaction | Amount Bar -->
+                        <div id="amountTotal">
+                            <ul>
+                                <li>
+                                    Credit Amount
+                                </li>
+                                <li class="amounts">
+                                    $100.00
+                                </li>
+                                <li>
+                                    Debit Amount
+                                </li>
+                                <li class="amounts">
+                                    $50.00
+                                </li>
+                                <li>
+                                    Net Amount
+                                </li>
+                                <li class="amounts">
+                                    $200.00
+                                </li>
+                                <li>
+                                    Total Amount
+                                </li>
+                                <li class="amounts">
+                                    $250.00
+                                </li>
+                            </ul>
+                        </div>
+
                         <button type="submit" class="btn btn-default">Submit</button>
                     </fieldset>
                 </form>

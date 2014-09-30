@@ -35,6 +35,10 @@ table.table{
     }
 
 
+.drawer-wrapper {
+    margin: 0;
+}
+
 .drawer
 {
     width: 1050px;
@@ -45,10 +49,28 @@ table.table{
          text-align: center;
     }
 
+        .drawer h2 a {
+            background-position: 11px 6px;
+        }
+
+        .drawer h2.expand a {
+            background-position: 11px -96px;
+        }
+
     .drawer ul {
         padding-left: 13px;
         margin-top: 1em;
     }
+        /* positioning of permanent template*/
+        .drawer ul #permTempPosition {
+            position:absolute;
+            left: -122px;
+        }
+            /* size of sequence box */
+            .drawer #permTempPosition select {
+                width: 117px;
+                padding: 6px
+            }
         .drawer ul li {
             list-style: none;
             display: inline-block;
@@ -61,3 +83,37 @@ table.table{
     .drawer #permanentDescription {
         width: 1023px;
     }
+
+#amountTotal {
+    width: 1179px;
+    height: 50px;
+
+    background: #003145;
+    color: #fff;
+    font-size: 13px;
+}
+    #amountTotal ul {
+        margin: 0 0 0 129px;
+        padding: 0;
+
+        line-height: 1;
+    }
+        #amountTotal ul li {
+            width: 128px;
+            padding: 19px 10px;
+
+            list-style: none;
+            display: inline-block;
+
+            font-weight: 700;
+
+            border-right:1px solid #fff;
+        }
+
+        #amountTotal ul li.amounts {
+            text-align: center;
+        }
+
+            #amountTotal ul li:nth-child(8) {
+                border: none;
+            }

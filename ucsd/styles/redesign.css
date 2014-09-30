@@ -66,6 +66,12 @@
       height: 379px;
     }
 
+    @media screen and (max-width: 768px) {
+      #nav-feature {
+        height: auto;
+      }
+    }
+
     /* rotator image to match height of nav-bar */
     #nav-feature {
       height: 380px;
