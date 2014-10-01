@@ -156,3 +156,27 @@ table.table{
             #amountTotal ul li:nth-child(8) {
                 border: none;
             }
+
+div#finalButtons-wrapper
+{
+    height: 15px;
+    padding-top: 5px;
+}
+
+    div#finalButtons-wrapper #finalButtons-right {
+        position: absolute;
+        margin: 0;
+        right:51px;
+    }
+
+        div#finalButtons-wrapper #finalButtons-right #complete-approve {
+            background-color: #D56A03;
+            color: #fff;
+
+            border: none;
+        }
+/*final buttons*/
+button.btn
+{
+
+}
