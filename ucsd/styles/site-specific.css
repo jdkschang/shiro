@@ -37,28 +37,67 @@ table.table{
 
 .drawer-wrapper {
     margin: 0;
+    /*height: 183px;*/
 }
 
 .drawer
 {
     width: 1050px;
-    left: 129px;
+    /*height: 36px;*/
+
     position: relative;
+    left: 129px;
 }
     .drawer h2 {
-         text-align: center;
+        /*background-color: #0B4A67;*/
+
+        text-align: left;
+        padding: .75em 0;
+        font-size: 14px;
+        font-weight: 700;
     }
 
+    /*.drawer h2.expand {*/
+        /*background-color: #ff;*/
+    /*}*/
+
         .drawer h2 a {
-            background-position: 11px 6px;
+            /*background-position: 11px 6px;*/
+            background-position: 11px -1px;
+            padding-left: 37px;
         }
 
         .drawer h2.expand a {
-            background-position: 11px -96px;
+            /*background-position: 11px -96px;*/
+            background-position: 11px -100px;
         }
 
+        .drawer h2 span.transactionLinks-right {
+            color: #0B4A67;
+
+            position: relative;
+            bottom:13px;
+
+            float: right;
+        }
+
+        .drawer h2.expand span.transactionLinks-right {
+            color: #fff;
+        }
+            .drawer h2 span.transactionLinks-right a {
+                background: none;
+                display: inline-block;
+                font-weight: 100;
+
+                padding: 0 10px;
+            }
+
+            .drawer h2 span.transactionLinks-right a:hover {
+                text-decoration: underline;
+            }
+
     .drawer ul {
-        padding-left: 13px;
+        padding-left: 11px;
         margin-top: 1em;
     }
         /* positioning of permanent template*/
@@ -77,11 +116,11 @@ table.table{
         }
 
     .drawer .form-control {
-        width: 253px;
+        width: 255px;
     }
 
     .drawer #permanentDescription {
-        width: 1023px;
+        width: 1031px;
     }
 
 #amountTotal {
