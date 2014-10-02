@@ -120,6 +120,8 @@ table.table{
     .drawer ul {
         padding-left: 11px;
         margin-top: 1em;
+
+        display: none;
     }
         /* positioning of permanent template*/
         .drawer ul #permTempPosition {
