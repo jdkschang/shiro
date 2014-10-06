@@ -10,6 +10,7 @@
 
 label {
     margin: 5px 15px 5px 0;
+    line-height: 1.7;
 }
 
 fieldset {
@@ -165,7 +166,7 @@ table.table{
         position: relative;
         left: 139px;
 
-
+        overflow: hidden;
     }
         #amountTotal ul {
             /*margin: 0 0 0 129px;*/
@@ -174,9 +175,10 @@ table.table{
 
             height: inherit;
             line-height: 1;
+
         }
             #amountTotal ul li {
-                width: 125px;
+                width: 253px;
                 height: 31px;
 
                 list-style: none;
@@ -194,7 +196,7 @@ table.table{
             }
 
                 #amountTotal ul li.amounts input {
-                    width: 100%;
+                    width: 125px;
                     padding: 10px;
                 }
 
@@ -207,7 +209,7 @@ div#finalButtons-wrapper
     div#finalButtons-wrapper #finalButtons-right {
         position: absolute;
         margin: 0;
-        right: 0;
+        right: 10px;
     }
 
         div#finalButtons-wrapper #finalButtons-right #complete-approve {
