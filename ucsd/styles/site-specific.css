@@ -58,6 +58,7 @@ table.table{
 
 .drawer
 {
+    border-bottom: none;
     width: 1050px;
     /*height: 36px;*/
 
@@ -76,7 +77,6 @@ table.table{
     .drawer h2.expand:hover {
         background-color: #fff;
     }
-
         /*create white background with black text to assimilate with header*/
         .drawer h2 a,
         .drawer h2.expand a {
@@ -146,39 +146,57 @@ table.table{
         width: 1031px;
     }
 
-#amountTotal {
+#amountTotal-wrapper {
     width: 1179px;
-    height: 50px;
+    height: 100px;
 
-    background: #003145;
-    color: #fff;
-    font-size: 13px;
+    position: relative;
+    top: 20px;
 }
-    #amountTotal ul {
-        margin: 0 0 0 129px;
-        padding: 0;
 
-        line-height: 1;
+    #amountTotal
+    {
+        background: #003145;
+        color: #fff;
+        font-size: 13px;
+
+        height: 50px;
+        width: 1032px;
+        position: relative;
+        left: 139px;
+
+
     }
-        #amountTotal ul li {
-            width: 128px;
-            padding: 19px 10px;
+        #amountTotal ul {
+            /*margin: 0 0 0 129px;*/
+            margin: 0;
+            padding: 0;
 
-            list-style: none;
-            display: inline-block;
-
-            font-weight: 700;
-
-            border-right:1px solid #fff;
+            height: inherit;
+            line-height: 1;
         }
+            #amountTotal ul li {
+                width: 125px;
+                height: 31px;
 
-        #amountTotal ul li.amounts {
-            text-align: center;
-        }
+                list-style: none;
+                display: inline-block;
 
-            #amountTotal ul li:nth-child(8) {
-                border: none;
+                font-weight: 700;
+                text-align: right;
+
+                padding-right: 10px;
+                /*border-right:1px solid #fff;*/
             }
+
+            #amountTotal ul li.amounts {
+                padding: 8px 0 9px;
+            }
+
+                #amountTotal ul li.amounts input {
+                    width: 100%;
+                    padding: 10px;
+                }
 
 div#finalButtons-wrapper
 {
@@ -189,7 +207,7 @@ div#finalButtons-wrapper
     div#finalButtons-wrapper #finalButtons-right {
         position: absolute;
         margin: 0;
-        right:51px;
+        right: 0;
     }
 
         div#finalButtons-wrapper #finalButtons-right #complete-approve {

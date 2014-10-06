@@ -304,42 +304,50 @@
                         </div>
 
                         <!--Total Transaction | Amount Bar -->
-                        <div id="amountTotal">
+                        <div id="amountTotal-wrapper">
+                            <div id="amountTotal">
                             <ul>
                                 <li>
                                     Credit Amount
                                 </li>
                                 <li class="amounts">
-                                    $100.00
+                                    <label for="creditAmount" class="sr-only">Credit Amount</label>
+                                    <input type="text" class="form-control" id="creditAmount" placeholder="$">
                                 </li>
                                 <li>
                                     Debit Amount
                                 </li>
                                 <li class="amounts">
-                                    $50.00
+                                    <label for="debittAmount" class="sr-only">Debit Amount</label>
+                                    <input type="text" class="form-control" id="debittAmount" placeholder="$">
                                 </li>
                                 <li>
                                     Net Amount
                                 </li>
                                 <li class="amounts">
-                                    $200.00
+                                    <label for="netAmount" class="sr-only">Net Amount</label>
+                                    <input type="text" class="form-control" id="netAmount" placeholder="$">
                                 </li>
                                 <li>
                                     Total Amount
                                 </li>
                                 <li class="amounts">
-                                    $250.00
+                                    <label for="totalAmount" class="sr-only">Total Amount</label>
+                                    <input type="text" class="form-control" id="totalAmount" placeholder="$">
                                 </li>
                             </ul>
+                            </div>
+
+                            <div id="finalButtons-wrapper">
+                                <div id="finalButtons-right">
+                                    <button type="reset" class="btn btn-default">Cancel</button>
+                                    <button type="submit" class="btn btn-default">Complete</button>
+                                    <button type="submit" class="btn btn-default" id="complete-approve">Complete & Approve</button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div id="finalButtons-wrapper">
-                        <div id="finalButtons-right">
-                            <button type="reset" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-default">Complete</button>
-                            <button type="submit" class="btn btn-default" id="complete-approve">Complete & Approve</button>
-                        </div>
-                        </div>
+
                     </fieldset>
                 </form>
             </div>
