@@ -56,7 +56,9 @@
         }
 
     .search-box {
-        border-radius: 0;
+        border-radius: 3px;
+
+        width:90%;
     }
 
     .search-button, .search-button:link, .search-button:visited, .search-button:hover, .search-button:active {
@@ -67,10 +69,6 @@
         margin: 0;
         position: relative;
         right: 27px;
-    }
-
-    .search-box {
-        width:90%;
     }
 
 #tdr_nav

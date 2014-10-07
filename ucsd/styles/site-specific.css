@@ -157,8 +157,8 @@ table.table{
 
     #amountTotal
     {
-        background: #003145;
-        color: #fff;
+        background: rgb(240,240,240);
+        color: rgb(51,51,51);
         font-size: 13px;
 
         height: 50px;
