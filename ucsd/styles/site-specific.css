@@ -35,6 +35,22 @@ table.table{
         width:100%;
     }
 
+    form fieldset.fixed-width,
+    form fieldset .fixed-width {
+        width: 400px;
+    }
+
+@media (max-width: 1200px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+        -webkit-overflow-scrolling: touch;
+    }
+}
 
 /*css arrow right & down*/
 .arrow-downright

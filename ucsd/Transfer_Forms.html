@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="styles/site-specific.css"/>
     <!-- End Site-specific CSS files -->
 
-    <style>form {
-        max-width: 400px;
-    }</style>
+    <!--<style>form {-->
+        <!--max-width: 400px;-->
+    <!--}</style>-->
     <!-- For demo purpose; include this in your site specific CSS file -->
 
     <script src="scripts/modernizr.js"></script>
@@ -123,7 +123,7 @@
                 <h1>Transfer Funds</h1>
 
                 <form role="form">
-                    <fieldset>
+                    <fieldset class="fixed-width">
                         <legend>Header</legend>
                         <div class="form-group">
                             <label for="documentNumber">Document Number</label>
@@ -161,7 +161,7 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="fixed-width">
                         <legend>Text</legend>
                         <div class="form-group">
                             <label for="documentText">Document Text</label>
@@ -171,17 +171,10 @@
 
                     <fieldset>
                         <legend>Details</legend>
-                        <div class="form-group">
+                        <div class="form-group fixed-width">
                             <label for="exampleInputFile">File input</label>
                             <input type="file" class="form-control" id="exampleInputFile">
-
-                            <!--<p class="help-block">Example block-level help text here.</p>-->
                         </div>
-                        <!--<div class="checkbox">-->
-                            <!--<label>-->
-                                <!--<input type="checkbox"> Check me out-->
-                            <!--</label>-->
-                        <!--</div>-->
                         <br/>
 
                         <!-- table layout -->
