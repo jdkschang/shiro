@@ -89,22 +89,6 @@
       height: 379px;
     }
 
-    @media screen and (max-width: 1200px) {
-        #nav-feature {
-            height: auto;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-      #nav-feature {
-          float: left;
-          height: auto;
-          position: relative;
-          width: 100%;
-          margin-left: 0;
-      }
-    }
-
     /* rotator image to match height of nav-bar */
     #nav-feature {
       height: 380px;
@@ -269,3 +253,41 @@
       color: #ef7000;
       font-size: 18px;
     }
+
+/*RESPONSIVE CSS*/
+
+@media screen and (max-width: 1200px) {
+    #nav-bar {
+        border-bottom: 1px solid #2b92b9;
+    }
+
+    #nav-feature {
+        height: auto;
+    }
+
+    #nav-wrapper {
+        height: auto;
+    }
+
+    #nav-list li {
+        padding: 5px 0;
+    }
+
+    #nav-bar #give-now1 p {
+        margin-top: 5px;
+    }
+
+    #nav-bar #give-now1 a {
+        margin-top: 7px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #nav-feature {
+        float: left;
+        height: auto;
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+    }
+}
