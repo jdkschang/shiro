@@ -1,0 +1,11 @@
+form .dbl-col
+{
+    position: relative;
+    top: -144px;
+    left: 450px;
+}
+
+form .fixed-height
+{
+    height: 220px;
+}
