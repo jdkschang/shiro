@@ -8,6 +8,11 @@
     text-align: right;
 }
 
+/*base min css override*/
+input[type=text], textarea {
+    padding: 6px 12px;
+}
+
 label {
     margin: 5px 15px 5px 0;
     line-height: 1.7;
@@ -23,7 +28,8 @@ legend {
     margin: 0 0 10px;
 }
 
-table.table{
+table.table
+{
     margin-bottom:0;
 }
     table.table td input {
