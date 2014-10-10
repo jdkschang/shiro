@@ -141,15 +141,15 @@ table.table{
         display: none;
     }
         /* positioning of permanent template*/
-        .drawer ul #permTempPosition {
-            position:absolute;
-            left: -122px;
-        }
+        /*.drawer ul #permTempPosition {*/
+            /*position:absolute;*/
+            /*left: -122px;*/
+        /*}*/
             /* size of sequence box */
-            .drawer #permTempPosition select {
-                width: 117px;
-                padding: 6px
-            }
+            /*.drawer #permTempPosition select {*/
+                /*width: 117px;*/
+                /*padding: 6px*/
+            /*}*/
         .drawer ul li {
             list-style: none;
             display: inline-block;
@@ -160,7 +160,7 @@ table.table{
     }
 
     .drawer #permanentDescription {
-        width: 1031px;
+        width: 773px;
     }
 
 #amountTotal-wrapper {
