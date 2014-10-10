@@ -4,8 +4,28 @@ form .dbl-col
     top: -192px;
     left: 450px;
 }
-
 form .fixed-height
 {
     height: 220px;
+}
+
+@media (max-width: 875px) {
+    form .dbl-col {
+        top: -48px;
+        left: 0;
+    }
+
+    form .fixed-height {
+        height: 400px;
+    }
+
+    form #responsive-emailName {
+        position: relative;
+        top: 144px;
+    }
+
+    form #responsive-emailTo {
+        position: relative;
+        top: 48px;
+    }
 }
