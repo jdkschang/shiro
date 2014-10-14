@@ -1,0 +1,24 @@
+/*IE 7 & 8 SUPPORT*/
+
+/* IE7 */
+*+html #dieciocho {  color: red }
+
+/* IE7, IE8 */
+#veinte { color/*\**/: blue\9; }
+
+.form-control {
+    width/*\**/: 55%;
+    text-align/*\**/: left;
+}
+
+*+html label { margin/*\**/: 0; text-align/*\**/: left;}
+*+html .form-control label { margin: 0; }
+
+*+html .drawer ul li { float: left; }
+
+*+html #amountTotal ul li { display: inline; }
+
+form fieldset.fixed-width,
+form fieldset .fixed-width {
+    width/*\**/: 480px;
+}

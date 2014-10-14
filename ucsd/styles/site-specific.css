@@ -43,7 +43,7 @@ table.table
 
     form fieldset.fixed-width,
     form fieldset .fixed-width {
-        width: 400px;
+        width: 420px;
     }
 
 @media (max-width: 1200px) {
