@@ -46,18 +46,6 @@ table.table
         width: 420px;
     }
 
-@media (max-width: 1200px) {
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid #ddd;
-        -webkit-overflow-scrolling: touch;
-    }
-}
-
 /*css arrow right & down*/
 .arrow-downright
 {
@@ -233,8 +221,23 @@ div#finalButtons-wrapper
 
             border: none;
         }
-/*final buttons*/
-button.btn
-{
+        
+@media (max-width: 1200px) {
+    .drawer {
+        left: 0;
+    }
 
+    #amountTotal {
+        left: 0;
+    }
+
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+        -webkit-overflow-scrolling: touch;
+    }
 }
