@@ -1,11 +1,5 @@
 /*IE 7 & 8 SUPPORT*/
 
-/* IE7 */
-*+html #dieciocho {  color: red }
-
-/* IE7, IE8 */
-#veinte { color/*\**/: blue\9; }
-
 .form-control {
     width/*\**/: 55%;
     text-align/*\**/: left;
@@ -24,3 +18,17 @@ form fieldset.fixed-width,
 form fieldset .fixed-width {
     width/*\**/: 480px;
 }
+
+form fieldset.fixed-height {
+    height/*\**/: 285px;
+}
+
+*+html form fieldset.ie7-fix {
+    position/*\**/: relative;
+    left/*\**/: -484px;
+}
+
+*+html form textarea {
+    padding/*\**/: 0 !important;
+}
+/* -484 left */
