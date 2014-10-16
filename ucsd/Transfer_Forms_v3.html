@@ -270,7 +270,8 @@
             <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
         </select>
     </div>
-
+</div>
+<div class="row">
     <div class="col-xs-6 col-sm-3">
         <label for="fteAmount" class="sr-only">FTE Amount</label>
         <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
@@ -287,7 +288,8 @@
         <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
         <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
     </div>
-
+</div>
+<div class="row">
     <div class="col-xs-6 col-sm-3">
         <label for="permanentTemplate" class="sr-only">Permanent Template</label>
         <select id="permanentTemplate" class="form-control" name="currentTemplate">
@@ -303,26 +305,36 @@
 <!--</ul>-->
 </div>
 
-<div class="input-group row">
-    <div class="form-group input-group col-xs-6 col-sm-3">
-        <label for="creditAmount">Posting Type</label>
-        <span class="input-group-addon">$</span>
-        <input type="text" class="form-control" id="creditAmount">
-    </div>
-    <div class="form-group input-group col-xs-6 col-sm-3">
-        <label for="debitAmount">Debit Amount</label>
-        <span class="input-group-addon">$</span>
-        <input type="text" class="form-control" id="debitAmount">
-    </div>
-    <div class="form-group input-group col-xs-6 col-sm-3">
-        <label for="netAmount">Net Amount</label>
-        <span class="input-group-addon">$</span>
-        <input type="text" class="form-control" id="netAmount">
-    </div>
-    <div class="form-group input-group col-xs-6 col-sm-3">
-        <label for="totalAmount">Total Amount</label>
-        <span class="input-group-addon">$</span>
-        <input type="text" class="form-control" id="totalAmount">
+<div class="row">
+    <div class="input-group">
+        <div class="col-sm-3">
+            <div class="form-group input-group">
+                <label for="creditAmount">Posting Type</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="creditAmount">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group input-group">
+                <label for="debitAmount">Debit Amount</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="debitAmount">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group input-group">
+                <label for="netAmount">Net Amount</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="netAmount">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group input-group">
+                <label for="totalAmount">Total Amount</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="totalAmount">
+            </div>
+        </div>
     </div>
 </div>
 
