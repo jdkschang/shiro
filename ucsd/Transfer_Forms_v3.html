@@ -17,6 +17,7 @@
 
     <link href="http://qa.ucsd.edu/common/cwp/4.0.0/styles/bootstrap.css" rel="stylesheet"/>
     <link href="http://qa.ucsd.edu/common/cwp/4.0.0/styles/base-min.css" rel="stylesheet"/>
+    <link href="styles/tf-site-specific.css" rel="stylesheet"/>
 
     <script src="http://qa.ucsd.edu/common/cwp/4.0.0/scripts/modernizr.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
@@ -188,7 +189,7 @@
 </fieldset>
 
 <!-- table layout -->
-<div style="overflow: scroll">
+<div>
     <table class="table">
         <tr>
             <th>Sequence</th>
@@ -220,13 +221,13 @@
 </div>
 
 
-            <span class="caret"></span><a href="#" id="permanent-description-link">Permanent Description</a>
+<span class="caret"></span><a href="#" id="permanent-description-link">Permanent Description</a>
 
-            <span class="transactionLinks-right">
-                <a href="#">Add</a>|
-                <a href="#">Copy</a>|
-                <a href="#">Delete</a>
-            </span>
+<span class="transactionLinks-right">
+    <a href="#">Add</a>|
+    <a href="#">Copy</a>|
+    <a href="#">Delete</a>
+</span>
 
 
 <!--<ul id="permanent-description-detail" class="hidden">-->
@@ -305,8 +306,8 @@
 <!--</ul>-->
 </div>
 
-<div class="row">
-    <div class="input-group">
+<div id="amountTotal-wrapper" class="row">
+    <div id="amountTotal" class="input-group">
         <div class="col-sm-3">
             <div class="form-group input-group">
                 <label for="creditAmount">Posting Type</label>
