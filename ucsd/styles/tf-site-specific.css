@@ -3,7 +3,7 @@ table.table
 }
     table.table td input {
         width: 115px;
-        padding-left: 10px;
+        /*padding-left: 10px;*/
     }
 
     table.table td.tbl-description input {
@@ -17,14 +17,17 @@ table.table
     margin: 30px 0 10px;
 }
 
-    .col-sm-3
-    {
-        padding: 2px 3px;
-    }
-    /*#amountTotal label {*/
-        /*width: 100px;*/
-    /*}*/
+.col-sm-3
+{
+    padding: 2px 3px;
+}
 
-    /*#amountTotal input {*/
-        /*width: 150px;*/
-    /*}*/
+.transactionLinks-right a {
+    color: rgb(43,146,185);
+
+    background: none;
+    display: inline-block;
+    font-weight: 100;
+
+    padding: 0 10px;
+}
