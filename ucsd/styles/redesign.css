@@ -34,7 +34,7 @@
       border: 0;
       border-radius: 8px;
 
-      box-shadow: 0 1px 3px #0b435e;
+      box-shadow: 0 0 3px #0b435e;
     }
 
     .search-nav-button.active {
@@ -289,5 +289,46 @@
         position: relative;
         width: 100%;
         margin-left: 0;
+    }
+}
+
+/* mobile view search bar changes */
+@media screen and (max-width: 640px) {
+    #search {
+        box-shadow: none;
+    }
+
+    .search-button, .search-button:link, .search-button:visited,
+    .search-button:hover, .search-button:active {
+        background: url("http://www.ucsd.edu/common/cwp/active-cherry/img/sprite_base.png") no-repeat scroll -461px -7px transparent
+    }
+
+    #search-nav {
+        background-color: #44acd3;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+        #search-nav #sa-search {
+            border-bottom-left-radius: 0;
+        }
+
+        .search-nav-button.active {
+            background: #44acd3;
+            border-bottom: 1px solid #44acd3;
+        }
+
+            .search-nav-button.active a {
+                border-right: 2px solid #0b435e;
+            }
+
+        #search-nav #sa-people {
+            border-bottom-left-radius: 0;
+        }
+
+    #search-content {
+        background: #44acd3;
+        height: 43px; /* height of search bar was too big */
     }
 }
