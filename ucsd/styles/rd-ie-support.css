@@ -1,6 +1,13 @@
+/*search icon replacement in ie*/
 .search-button, .search-button:link, .search-button:visited,
 .search-button:hover, .search-button:active {
     position:relative;
     top:-22px;
     right:-205px;
+}
+
+/*fixes bottom of text being cut off */
+.section-title H2 {
+    padding-bottom: 20px;
+    margin-bottom: -20px;
 }

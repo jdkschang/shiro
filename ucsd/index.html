@@ -21,6 +21,22 @@
     <!--[if IE]>
     <link rel="stylesheet" href="styles/rd-ie-support.css"/>
     <![endif]-->
+    <!-- ie 11 specific styling -->
+    <style>
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            .search-button, .search-button:link, .search-button:visited,
+            .search-button:hover, .search-button:active {
+                position:relative;
+                top:-22px;
+                right:-205px;
+            }
+
+            .section-title H2 {
+                padding-bottom: 20px;
+                margin-bottom: -20px;
+            }
+        }
+    </style>
 </head>
 
 <body id="home-body">
