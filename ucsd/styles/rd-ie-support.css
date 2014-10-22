@@ -6,7 +6,8 @@
     right:-205px;
 }
 
-/*fixes bottom of text being cut off */
+/*fixes bottom of text being cut off
+ this is due to line height*/
 .section-title H2 {
     padding-bottom: 20px;
     margin-bottom: -20px;
