@@ -8,7 +8,8 @@
 
 /*fixes bottom of text being cut off
  this is due to line height*/
-.section-title H2 {
+.section-title H2,
+.section-title p.more {
     padding-bottom: 20px;
     margin-bottom: -20px;
 }
