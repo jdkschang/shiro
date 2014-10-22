@@ -194,7 +194,7 @@
           float: right;
 
           height: 100%;
-          width: 75px;
+          width: 55px;
 
           font-size: 70px;
           border-left: 1px solid #fafafa;
@@ -312,16 +312,13 @@
     }
         #search-nav #sa-search {
             border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
         }
 
         .search-nav-button.active {
             background: #44acd3;
             border-bottom: 1px solid #44acd3;
         }
-
-            .search-nav-button.active a {
-                border-right: 2px solid #0b435e;
-            }
 
         #search-nav #sa-people {
             border-bottom-left-radius: 0;
