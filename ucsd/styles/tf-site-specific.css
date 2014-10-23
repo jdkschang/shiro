@@ -10,9 +10,9 @@
     border-left: 6px solid rgb(51,51,51);
 
     /*positioning*/
-    position: absolute;
-    left: 15px;
-    top: 15px;
+    position: relative;
+    left: 3px;
+    top: -16px;
 }
 
 .hidden .arrow-downright {
@@ -35,8 +35,7 @@ section#detail-section-wrapper
         position: relative;
         top: -10px;
     }
-
-        .transactionLinks-right a {
+        section .transactionLinks-right a {
             color: rgb(43,146,185);
 
             background: none;
@@ -45,17 +44,36 @@ section#detail-section-wrapper
 
             padding: 0 10px;
         }
-table.table
-{
-}
-    table.table td input {
-        width: 115px;
-        /*padding-left: 10px;*/
+
+    section table.table
+    {
+    }
+        table.table td input {
+            width: 115px;
+            /*padding-left: 10px;*/
+        }
+        table.table td.tbl-description input {
+            width:100%;
+        }
+
+    section #permanent-description-link
+    {
+        text-decoration: none;
+        color: rgb(51,51,51);
+        font-weight: 700;
+
+        /*positioning for arrow*/
+        margin-left: 20px;
     }
 
-    table.table td.tbl-description input {
-        width:100%;
+    section #permanent-description-detail
+    {
     }
+        /*align width of input boxes and center, fixes overflow on the sides*/
+        section #permanent-description-detail .row {
+            width: 100%;
+            margin: 0 auto;
+        }
 
 
 
@@ -64,22 +82,9 @@ table.table
     margin: 30px 0 10px;
 }
 
+
+/*minimize needless padding in bootstrap columns */
 .col-sm-3
 {
     padding: 2px 3px;
-}
-
-.transactionLinks-right
-{
-
-}
-
-.transactionLinks-right a {
-    color: rgb(43,146,185);
-
-    background: none;
-    display: inline-block;
-    font-weight: 100;
-
-    padding: 0 10px;
 }
