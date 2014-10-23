@@ -183,8 +183,11 @@
     <legend>Details</legend>
     <div class="form-group col_1_of_2 col">
         <label for="inputFile">File input</label>
-        <input type="file" class="form-control" id="inputFile">
+        <!--class="form-control" for the box around the input-->
+        <input type="file" id="inputFile">
     </div>
+
+    <section id="detail-section-wrapper">
 
     <span class="transactionLinks-right">
         <a href="#">Add</a>|
@@ -229,80 +232,81 @@
 
     <div id="permanent-description-detail" class="hidden">
         <div class="arrow-downright"></div>
-    <div class="row">
-        <div class="col-xs-6 col-sm-3">
-            <label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>
-            <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
-                <option value="0 - Local Campus">0 - Local Campus</option>
-                <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
-            </select>
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">
+                <label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>
+                <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
+                    <option value="0 - Local Campus">0 - Local Campus</option>
+                    <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
+                </select>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <label for="subCampusCode" class="sr-only">Sub Campus Code</label>
+                <select id="subCampusCode" class="form-control" name="subCampusCode">
+                    <option value="1 - General Campus">1 - General Campus</option>
+                    <option value="2 - Health Sciences">2 - Health Sciences</option>
+                    <option value="3 - Marine Sciences">3 - Marine Sciences</option>
+                </select>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <label for="transactionClassCode" class="sr-only">Transaction Class Code</label>
+                <select id="transactionClassCode" class="form-control" name="transactionClassCode">
+                    <option value="A - Adjustment">A - Adjustment</option>
+                    <option value="I - Increment">I - Increment</option>
+                </select>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <label for="transactionTypeCode" class="sr-only">Transaction Type Code</label>
+                <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
+                    <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
+                    <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
+                    <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
+                    <option value="4 - Academic Merit">4 - Academic Merit</option>
+                    <option value="5 - Staff Merit">5 - Staff Merit</option>
+                    <option value="6 - Academic Range">6 - Academic Range</option>
+                    <option value="7 - Staff Range">7 - Staff Range</option>
+                    <option value="8 - Reclassification">8 - Reclassification</option>
+                    <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
+                    <option value="B - Other">B - Other</option>
+                    <option value="A - Salary Turnover">A - Salary Turnover</option>
+                    <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
+                </select>
+            </div>
         </div>
-        <div class="col-xs-6 col-sm-3">
-            <label for="subCampusCode" class="sr-only">Sub Campus Code</label>
-            <select id="subCampusCode" class="form-control" name="subCampusCode">
-                <option value="1 - General Campus">1 - General Campus</option>
-                <option value="2 - Health Sciences">2 - Health Sciences</option>
-                <option value="3 - Marine Sciences">3 - Marine Sciences</option>
-            </select>
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">
+                <label for="fteAmount" class="sr-only">FTE Amount</label>
+                <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
+                <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <label for="permanentAmount" class="sr-only">Permanent Amount</label>
+                <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
+                <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
+            </div>
         </div>
-        <div class="col-xs-6 col-sm-3">
-            <label for="transactionClassCode" class="sr-only">Transaction Class Code</label>
-            <select id="transactionClassCode" class="form-control" name="transactionClassCode">
-                <option value="A - Adjustment">A - Adjustment</option>
-                <option value="I - Increment">I - Increment</option>
-            </select>
-        </div>
-        <div class="col-xs-6 col-sm-3">
-            <label for="transactionTypeCode" class="sr-only">Transaction Type Code</label>
-            <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
-                <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
-                <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
-                <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
-                <option value="4 - Academic Merit">4 - Academic Merit</option>
-                <option value="5 - Staff Merit">5 - Staff Merit</option>
-                <option value="6 - Academic Range">6 - Academic Range</option>
-                <option value="7 - Staff Range">7 - Staff Range</option>
-                <option value="8 - Reclassification">8 - Reclassification</option>
-                <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
-                <option value="B - Other">B - Other</option>
-                <option value="A - Salary Turnover">A - Salary Turnover</option>
-                <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
-            </select>
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">
+                <label for="permanentTemplate" class="sr-only">Permanent Template</label>
+                <select id="permanentTemplate" class="form-control" name="currentTemplate">
+                    <option value="" disabled selected>Permanent Template</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                </select>
+            </div>
+            <div class="col-sm-3 col-lg-9">
+                <label for="permanentDescription" class="sr-only">Permanent Description</label>
+                <input type="text" class="form-control" id="permanentDescription" placeholder="Permanent Description" maxlength="30">
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-6 col-sm-3">
-            <label for="fteAmount" class="sr-only">FTE Amount</label>
-            <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
-        </div>
-        <div class="col-xs-6 col-sm-3">
-            <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
-            <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
-        </div>
-        <div class="col-xs-6 col-sm-3">
-            <label for="permanentAmount" class="sr-only">Permanent Amount</label>
-            <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
-        </div>
-        <div class="col-xs-6 col-sm-3">
-            <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
-            <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 col-sm-3">
-            <label for="permanentTemplate" class="sr-only">Permanent Template</label>
-            <select id="permanentTemplate" class="form-control" name="currentTemplate">
-                <option value="" disabled selected>Permanent Template</option>
-                <option value="2013">2013</option>
-                <option value="2014">2014</option>
-            </select>
-        </div>
-        <div class="col-sm-3 col-lg-9">
-            <label for="permanentDescription" class="sr-only">Permanent Description</label>
-            <input type="text" class="form-control" id="permanentDescription" placeholder="Permanent Description" maxlength="30">
-        </div>
-    </div>
-    </div>
+    </section>
 </fieldset>
 
 <div id="amountTotal-wrapper" class="row">
