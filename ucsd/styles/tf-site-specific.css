@@ -31,15 +31,3 @@ table.table
 
     padding: 0 10px;
 }
-
-.form-control {
-    padding: 0.5em;
-}
-select {
-padding: 0.5em 0.2em;
-}
-
-input[type="text"], textarea {
-    padding:0.5em;
-}
-
