@@ -2,4 +2,6 @@
 # ignore the files below
 rootkey.csv
 .sass-cache/
+ucsd/.idea/
+
 
