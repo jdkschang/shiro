@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Faculty/Staff Directory: Search Results</title>
+    <link rel="stylesheet" href="//www.ucsd.edu/common/cwp/active-cherry/base-min.css" />
+    <link rel="stylesheet" href="//www.ucsd.edu/common/cwp/active-cherry/home-min.css" />
+    <script src="//www.ucsd.edu/common/cwp/active-cherry/base-min.js"></script>
+    <script src="//www.ucsd.edu/common/_emergency-broadcast/message.js"></script>
+    <script src="//www.ucsd.edu/common/cwp/active-cherry/home-min.js"></script>
+
+
+    <meta name="webapp.name" content="Directory" />
+    <meta name="webapp.url" content="/directory" />
+    <meta name="search.class" content=" " />
+    <meta name="people.class" content="active" />
+
+    <meta name="people.value" content="pollak" />
+    <link href="//www.ucsd.edu/common/cwp/active-cherry/lib/jquery-ui-1.8.18/jquery-ui-min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/datatables-1.9.4.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="styles/header-footer.css" media="all" rel="stylesheet" type="text/css" />
+
+    <style>
+        .dataTables_wrapper>.fg-toolbar:first-child {
+            display: none;
+        }
+    </style>
+
+</head>
+<body  >
+
+
+
+
+
+<!-- env -->
+
+<!-- emergency -->
+<div id="uc-emergency"></div>
+<!-- skip to content -->
+<a class="skip-link" href="#tdr_content">Skip to content</a>
+<!-- login -->
+
+<div id="tdr_login" style="display: none"></div>
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://a4.ucsd.edu/tritON/resources/bugscript.jsp?target=https%3A%2F%2Fwww.ucsd.edu&jsoncallback=?",
+                dataType: 'jsonp',
+                jsonpCallback: 'a4sso',
+                success: function(data) {
+                    if (data.eduUcsdActLoggedin) {
+                        var url = "<div id=\"tdr_login_content\">You are logged in | <a href=\"/security/logout?url=";
+                        url += "http://www.ucsd.edu";
+                        url += "\">Log Out</a></div>";
+                        $("#tdr_login").empty();
+                        $("#tdr_login").append(url);
+                        $("#tdr_login").attr("style", "display:block");
+                    }
+                },
+                error: function(jqXHR, textStatus) {
+                    console.log("error trying to communicate with a4 sso: " + textStatus);
+                }
+            });
+        });
+    })(jQuery);
+</script>
+
+
+<!-- title -->
+
+
+
+<div id="tdr_title">
+    <div id="tdr_title_content" class="showSearch">
+        <a id="tdr_title_ucsd_title" href="http://www.ucsd.edu">UC San Diego</a>
+        <div id="search">
+            <div id="search-nav">
+                <div id="sa-search" class="search-nav-button ">
+                    <a href="#search">Search</a>
+                </div>
+                <div id="sa-people" class="search-nav-button active">
+                    <a href="#people">Faculty/Staff</a>
+                </div>
+            </div>
+            <div id="search-content">
+                <div id="sc-search" class="search-content-area ">
+                    <form action="http://act.ucsd.edu/cwp/tools/search" class="first" id="site-search" name="{5C088896-C4CC-4430-A6D8-9DC9D2BE379D}" title="Search The UCSD Website">
+                        <label for="q">Search</label><input type="search" class="search-box" name="q" id="q" value="" />
+                        <input type="hidden" name="site" value="" />
+                        <button class="search-button" id="go-button" type="submit"></button>
+                    </form>
+                </div>
+                <div id="sc-people" class="search-content-area active">
+                    <form action="https://act.ucsd.edu/directory/search" class="last" id="people-search" method="get" name="{6997CAAD-DD2E-4962-B327-2EF82056C17C}" title="Search For People At UCSD">
+                        <label for="q3">Faculty/Staff</label><input name="jlinkevent" type="hidden" value="Redirect" /> <input type="search" class="search-box" id="q3" name="entry" value="pollak" />
+                        <button class="search-button" type="submit"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <a id="tdr_title_search_link" class="search-button">Search</a>
+        <a id="tdr_title_menu_link">Menu</a>
+    </div>
+</div>
+
+<div id="tdr_nav" style="display: ">
+    <div id="tdr_nav_content">
+        <ul id="tdr_nav_list">
+
+
+            <li><a href="http://blink.ucsd.edu/technology/help-desk/applications/myservices/mydirectory.html ">Add or Change Listing</a></li>
+            <li><a href="http://blink.ucsd.edu/technology/help-desk/directory/departments-quick/index.html ">Department Quick Index</a></li>
+            <li><a href="http://blink.ucsd.edu//technology/help-desk/directory/address.html ">Addresses &amp; Phone Numbers</a></li>
+            <li><a href="http://blink.ucsd.edu/technology/help-desk/directory/search.html ">Search Tips</a></li>
+            <li><a href="http://act.ucsd.edu/directory/search ">Advanced Search</a></li>
+            <li><a href="http://www.universityofcalifornia.edu/directories/welcome.html ">Other UC Campuses</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="tdr_crumbs" style="display: ">
+    <div id="tdr_crumbs_content">
+        <ul>
+
+        </ul>
+    </div>
+</div>
+
+<div id="tdr_content" class="tdr_fonts itag_webapp">
+<div id="tdr_content_content">
+
+
+
+<h1>Results</h1>
+
+
+
+
+
+
+<div style="float: right;">
+    <a href="search">Advanced Search</a>
+</div>
+<table class="styled datatable" style="width: 100%;">
+<thead>
+<tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Phone</th>
+    <th>Patient Care Phone</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Mail Code</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16833&blinkref="> Pollak, Brett  C.
+    </a></td>
+    <td>Director-Cam Web Ofc</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-246-0239">(858) 24<strong>6-0239</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>bpollak@ucsd.edu</td>
+    <td>ACT-CAMPUS WEB</td>
+    <td>0929</td>
+
+    <td>1.0</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16834&blinkref="> Pollak, Tyler  J.
+    </a></td>
+    <td>Student Asst</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:-"></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>tpollak@ucsd.edu</td>
+    <td>PSYCHIATRY</td>
+    <td>0949</td>
+
+    <td>1.0</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=2292&blinkref="> Brambila De Pollack, Dulce  E.
+        (Pollack)
+
+    </a></td>
+    <td>Admin Asst</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-822-6189">(858) 82<strong>2-6189</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>dpollack@ucsd.edu</td>
+    <td>MED ONCOL SVC</td>
+    <td>0987</td>
+
+    <td>0.2222221950543629</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16832&blinkref="> Pollack, Claudia
+    </a></td>
+    <td>Accts Payable Spec</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-457-8170">(858) 457-8170</a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td></td>
+    <td>LUDWIG INSTITUT</td>
+    <td>0660</td>
+
+    <td>0.07407407045169283</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16838&blinkref="> Pollard, Debra  L.
+        (Debi)
+
+    </a></td>
+    <td>Admin Analyst</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-822-4098">(858) 82<strong>2-4098</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>dpollard@ucsd.edu</td>
+    <td>MARINE PHYSCL L</td>
+    <td>0701</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16836&blinkref="> Pollard, Alvin  L.
+    </a></td>
+    <td>Sr Custodian</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-534-9094">(858) 53<strong>4-9094</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>a1pollard@ucsd.edu</td>
+    <td>FACILITIES MGMT</td>
+    <td>0908-M</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16350&blinkref="> Pawlak, Eugene  R.
+        (Geno)
+
+    </a></td>
+    <td>Assoc Professor</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-534-2343">(858) 53<strong>4-2343</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>epawlak@ucsd.edu</td>
+    <td>MECH/AEROSPC EN</td>
+    <td>0411</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16845&blinkref="> Pollock, Kimberly  A.
+    </a></td>
+    <td>Res Physician</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:619-543-5297">(619) 54<strong>3-5297</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>kapollock@ucsd.edu</td>
+    <td>ANESTHESIOLOGY</td>
+    <td>8770</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16842&blinkref="> Polley, Smarajit
+    </a></td>
+    <td>Postdoc Employee</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-822-0469">(858) 82<strong>2-0469</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>spolley@ucsd.edu</td>
+    <td>CHEM &amp; BIOCHEM</td>
+    <td>0375</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16844&blinkref="> Pollock, James  J.
+    </a></td>
+    <td>Fisc Analyst/Supv</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-534-4246">(858) 53<strong>4-4246</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>jjpollock@ucsd.edu</td>
+    <td>MBRD</td>
+    <td>0202</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=7544&blinkref="> Gollan, Tamar
+    </a></td>
+    <td>Assoc Professor IR</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-246-1263">(858) 24<strong>6-1263</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>tgollan@ucsd.edu</td>
+    <td>PSYCHIATRY</td>
+    <td>0109</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=23019&blinkref="> Wollam, Joshua  P.
+    </a></td>
+    <td>Postdoc Employee</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:-"></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>jwollam@ucsd.edu</td>
+    <td>MEDICINE</td>
+    <td>0673</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16846&blinkref="> Pollock, Mica
+    </a></td>
+    <td>Director</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-822-2272">(858) 82<strong>2-2272</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td></td>
+    <td>CREATE</td>
+    <td>0036</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16837&blinkref="> Pollard, Daniel  A.
+        (Dan)
+
+    </a></td>
+    <td>Postdoc Fellow</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:-"></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>dapollard@ucsd.edu</td>
+    <td>DIV BIOLOGICAL</td>
+    <td>0116</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=9148&blinkref="> Hollan, James  D., Dr.
+        (Jim)
+
+    </a></td>
+    <td>Professor</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-534-8156">(858) 53<strong>4-8156</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>jhollan@ucsd.edu</td>
+    <td>COG SCI</td>
+    <td>0515</td>
+
+    <td>0.03703703115066751</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16843&blinkref="> Polley-Michea, Teresa  K.
+    </a></td>
+    <td>Per Diem Nurse</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-246-0500">(858) 24<strong>6-0500</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>tpolleymichea@ucsd.edu</td>
+    <td>RADIATION ONCOL</td>
+    <td>7665</td>
+
+    <td>0.02314814294097511</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=11839&blinkref="> Lee-Pollock, Teresa  G.
+    </a></td>
+    <td>Hosp Asst</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-657-8823">(858) 65<strong>7-8823</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>tleepollock@ucsd.edu</td>
+    <td>MEDCTR ADMISSIO</td>
+    <td>8952</td>
+
+    <td>0.02314814294097511</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=2677&blinkref="> Burke, Polly  J.
+    </a></td>
+    <td>Award Accountant</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-822-7858">(858) 82<strong>2-7858</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>pjburke@ucsd.edu</td>
+    <td>BFS-OPAFS</td>
+    <td>0954</td>
+
+    <td>0.02222222765579409</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=18151&blinkref="> Rolla, Peter  J.
+    </a></td>
+    <td>Librarian</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-822-5890">(858) 82<strong>2-5890</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>prolla@ucsd.edu</td>
+    <td>GEISEL LIBRARY</td>
+    <td>0175A</td>
+
+    <td>0.02222222765579409</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=15414&blinkref="> Nobiensky, Polly  D.
+    </a></td>
+    <td>Clin Nurse</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-822-6049">(858) 82<strong>2-6049</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>pnobiensky@ucsd.edu</td>
+    <td>RADIATION ONCOL</td>
+    <td>0843</td>
+
+    <td>0.02222222765579409</td>
+
+</tr>
+
+<tr>
+    <td><a href="faculty_staff?list_code=16058&blinkref="> Palla, James  P.
+    </a></td>
+    <td>Database Admin</td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:858-246-0300">(858) 24<strong>6-0300</strong></a></td>
+    <td style="white-space: nowrap;"><a class="tel" href="tel:"></a></td>
+    <td>jpalla@ucsd.edu</td>
+    <td>ACT-IT INFRASTR</td>
+    <td>0903</td>
+
+    <td>0.02222222765579409</td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+
+
+<div class="empl_msg" style="padding-top: 10px; width:100%; clear: both;">
+    <p> NOTICE: This campus directory has been compiled for the use and convenience of the faculty and staff of the University of California, San Diego and others dealing with UCSD. It is the property of the Regents of the University of California. Neither this directory nor the information contained herein may be used, rented, distributed, or sold for commercial purposes in accordance with the California Information Practices Act. </p>
+</div>
+
+<script src="//www.ucsd.edu/common/cwp/active-cherry/lib/jquery-ui-1.8.18/jquery-ui-min.js" type="text/javascript"></script>
+<script src="//uxt.ucsd.edu/common/jquery-plugin/dataTables/1.9.4/js/jquery.dataTables-1.9.4.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var oTable = $(".datatable").dataTable({
+        "bJQueryUI" : true,
+        "bAutoWidth" : false,
+        "sPaginationType" : "full_numbers",
+        "oLanguage" : {
+            "sSearch" : "Filter:",
+            "sEmptyTable" : "<p>Your search didn't return any results. Suggestion: Try a \"sounds like\" search, or try looking at our <a href=\"http://blink.ucsd.edu/technology/help-desk/directory/search.html\">search tips</a>.</p><p>Want to search for a title, department, or location? Try our <a href=\"search\">Advanced Search</a>.</p>"
+        },
+        "bFilter" : false,
+        "aaSorting": [[7,'desc'], [0,'asc']],
+        "aoColumnDefs" : [{
+            "aTargets" : [ 8 ],
+
+            "aTargets" : [ 7 ],
+            "bVisible" : false
+        }]
+    });
+
+    var resizer = function () {
+        if (oTable.length > 0) {
+            if (window.innerWidth < 500) {
+                oTable.fnSetColumnVis(1,false);
+                oTable.fnSetColumnVis(2,false);
+                oTable.fnSetColumnVis(3,false);
+                oTable.fnSetColumnVis(4,false);
+                oTable.fnSetColumnVis(5,false);
+                oTable.fnSetColumnVis(6,false);
+            } else if (window.innerWidth < 960) {
+                oTable.fnSetColumnVis(1,false);
+                oTable.fnSetColumnVis(2,true);
+                oTable.fnSetColumnVis(3,true);
+                oTable.fnSetColumnVis(4,false);
+                oTable.fnSetColumnVis(5,false);
+                oTable.fnSetColumnVis(6,false);
+            } else {
+                oTable.fnSetColumnVis(1,true);
+                oTable.fnSetColumnVis(2,true);
+                oTable.fnSetColumnVis(3,true);
+                oTable.fnSetColumnVis(4,true);
+                oTable.fnSetColumnVis(5,true);
+                oTable.fnSetColumnVis(6,true);
+            }
+        }
+    };
+
+    $(window).resize(resizer);
+    resizer();
+
+
+
+</script>
+
+</div>
+</div>
+
+<!-- footer -->
+<div id="tdr_footer">
+    <div id="tdr_footer_content">
+        <div id="footer-col1" class="footer-col-wide">
+            <ul>
+                <li><a href="http://www.ucsd.edu/emergency/">Emergency Status</a></li>
+                <li><a href="http://diversity.ucsd.edu/index.html">Diversity Matters</a></li>
+                <li><a href="http://disabilities.ucsd.edu/">Disability Resources</a></li>
+                <li><a href="http://www.ucsd.edu/explore/about/principles.html">Principles of Community</a></li>
+            </ul>
+        </div>
+        <div id="footer-col2" class="footer-col-wide">
+            <h4>Stay connected</h4>
+            <div id="social-buttons" class="clearfix">
+                <a href="http://facebook.com/ucsandiegolife" id="social-facebook">Facebook</a> <a href="http://twitter.com/ucsandiego" id="social-twitter">Twitter</a> <a href="http://www.youtube.com/user/UCSanDiego" id="social-youtube">YouTube</a>
+            </div>
+            <p>
+                UC San Diego<br /> 9500 Gilman Dr., La Jolla, CA 92093<br /> (858) 534-2230
+            </p>
+            <p>
+                Copyright &copy;<span id="tdr_copyright_year">2012</span> <br /> Regents of the University of California. <br /> All rights reserved.
+            </p>
+            <ul>
+                <li><a href="http://www.ucsd.edu/_about/legal/uc-san-diego-website-terms-of-use.html" title="Terms of Use">Terms</a></li>
+                <li><a href="//act.ucsd.edu/cwp/feedback/tool/apps"
+                       onclick="window.open('//act.ucsd.edu/cwp/feedback/tool/app', 'DYGWYW', 'menubar=0,resizable=1,scrollbars=1,width=450,height=680');" target="DYGWYW">Feedback</a>
+                </li>
+                <li><a href="http://cwo.ucsd.edu">Campus Web Office</a></li>
+            </ul>
+        </div>
+        <div id="footer-col3" class="footer-col">
+            <h4>Divisions and schools</h4>
+            <ul>
+                <li><a href="http://dah.ucsd.edu/">Arts &amp; Humanities</a></li>
+                <li><a href="http://biology.ucsd.edu/">Biological Sciences</a></li>
+                <li><a href="http://www.jacobsschool.ucsd.edu/">Jacobs School of Engineering</a></li>
+                <li><a href="http://physicalsciences.ucsd.edu/">Physical Sciences</a></li>
+                <li><a href="http://rady.ucsd.edu/">Rady School of Management</a></li>
+                <li><a href="http://irps.ucsd.edu/">School of International Relations and Pacific Studies</a></li>
+                <li><a href="http://som.ucsd.edu/">School of Medicine</a></li>
+                <li><a href="http://www.sio.ucsd.edu/">Scripps Institution of Oceanography</a></li>
+                <li><a href="http://pharmacy.ucsd.edu/index.shtml">Skaggs School of Pharmacy &amp; Pharmaceutical Sciences</a></li>
+                <li><a href="http://socialsciences.ucsd.edu/">Social Sciences</a></li>
+            </ul>
+        </div>
+        <div id="footer-col4" class="footer-col">
+            <h4>Other university sites</h4>
+            <ul>
+                <li><a href="http://www.ucsd.edu/_about/a-to-z-site-index/index.html">A-Z Site Index</a></li>
+                <li><a href="http://www.ucsdtritons.com/">Athletics</a></li>
+                <li><a href="http://blink.ucsd.edu/">Blink</a></li>
+                <li><a href="http://diversity.ucsd.edu/index.html">Diversity</a></li>
+                <li><a href="http://extension.ucsd.edu/">Extension</a></li>
+                <li><a href="http://health.ucsd.edu/">Health System</a></li>
+                <li><a href="http://libraries.ucsd.edu/">The Library</a></li>
+                <li><a href="http://act.ucsd.edu/maps/">Maps</a></li>
+                <li><a href="http://preuss.ucsd.edu/">Preuss School</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- shib timeout -->
+<img src="https://a4.ucsd.edu/tritON/imagebug" alt=" " style="display: none;" />
+<!-- google analytic -->
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', "UA-24480055-22"]);
+    _gaq.push(['_setDomainName', "ucsd.edu"]);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>
