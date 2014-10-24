@@ -12,10 +12,11 @@
     /*positioning*/
     position: relative;
     left: 3px;
-    top: -13px;
+    top: -127px;
 }
 
-section #permanent-description-detail.hidden .arrow-downright {
+section #permanent-description-detail.hidden + .arrow-downright {
+    top: -16px;
     border: 6px solid transparent;
 
     /*expanded down arrow*/
