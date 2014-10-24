@@ -1,7 +1,8 @@
 # shirou
 # ignore the files below
+
+ucsd/.idea
+
 rootkey.csv
 .sass-cache/
-ucsd/.idea/
-
 

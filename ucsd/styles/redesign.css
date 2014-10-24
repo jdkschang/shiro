@@ -1,5 +1,12 @@
 /* redesign css */
 
+/* whitney clean thin font */
+@font-face {
+    font-family: 'Whitney';
+    src: url(../fonts/whitney-book.woff) format('woff'),
+         url(../fonts/whitney-book.ttf) format('truetype');
+}
+
 #header
 {
 }
@@ -25,36 +32,52 @@
     #search {
       background: #2b92b9;
       border: 0;
-      border-radius: 0;
+      border-radius: 8px;
 
-      box-shadow: 0 1px 5px #0b435e;
+      box-shadow: 0 0 3px #0b435e;
     }
 
     .search-nav-button.active {
       background: #2b92b9;
     }
     #search-nav {
-      background-color: #fff;
+        background-color: #fff;
+
+        border-radius: 13px;
     }
 
-    #search-content {
-      background: #2b92b9;
-    }
+        /*top left*/
+        #search-nav #sa-search {
+            border-top-left-radius: 8px;
+        }
+
+        /*bottom left*/
+        #search-nav #sa-people {
+            border-bottom-left-radius: 8px;
+        }
+
+        /*top & bottom right*/
+        #search-content {
+            background: #2b92b9;
+
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
     .search-box {
-      border-radius: 0;
+        border-radius: 3px;
+
+        width:90%;
     }
 
     .search-button, .search-button:link, .search-button:visited, .search-button:hover, .search-button:active {
-      background: url(images/search-icon2.png);
-      height:20px;
-      width:20px;
+        background: url(images/search-icon2.png);
+        height:20px;
+        width:20px;
 
-      position: relative;
-      right: 27px;
-    }
-
-    .search-box {
-      width:90%;
+        margin: 0;
+        position: relative;
+        right: 27px;
     }
 
 #sidebar-nav
@@ -150,13 +173,16 @@
          * padding left so its not flush with the background
          */
         .section-title h2 {
-          color: #fafafa;
-          font-size: 44px;
-          padding: 0 20px;
+            color: #fafafa;
+            font-family: Whitney, sans-serif;
+            font-weight: 100;
+            font-size: 44px;
 
-          background: none;
-          margin: 0;
-          top: 27px;
+
+            background: none;
+            padding-left: 20px;
+            margin: 0;
+            top: 14px;
         }
 
         /*
@@ -168,7 +194,7 @@
           float: right;
 
           height: 100%;
-          width: 75px;
+          width: 55px;
 
           font-size: 70px;
           border-left: 1px solid #fafafa;
@@ -227,3 +253,79 @@
       color: #ef7000;
       font-size: 18px;
     }
+
+/*RESPONSIVE CSS*/
+
+@media screen and (max-width: 1200px) {
+    #nav-bar {
+        border-bottom: 1px solid #2b92b9;
+    }
+
+    #nav-feature {
+        height: auto;
+    }
+
+    #nav-wrapper {
+        height: auto;
+    }
+
+    #nav-list li {
+        padding: 5px 0;
+    }
+
+    #nav-bar #give-now1 p {
+        margin-top: 5px;
+    }
+
+    #nav-bar #give-now1 a {
+        margin-top: 7px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #nav-feature {
+        float: left;
+        height: auto;
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* mobile view search bar changes */
+@media screen and (max-width: 640px) {
+    #search {
+        box-shadow: none;
+    }
+
+    .search-button, .search-button:link, .search-button:visited,
+    .search-button:hover, .search-button:active {
+        background: url("http://www.ucsd.edu/common/cwp/active-cherry/img/sprite_base.png") no-repeat scroll -461px -7px transparent
+    }
+
+    #search-nav {
+        background-color: #44acd3;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+        #search-nav #sa-search {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .search-nav-button.active {
+            background: #44acd3;
+            border-bottom: 1px solid #44acd3;
+        }
+
+        #search-nav #sa-people {
+            border-bottom-left-radius: 0;
+        }
+
+    #search-content {
+        background: #44acd3;
+        height: 43px; /* height of search bar was too big */
+    }
+}

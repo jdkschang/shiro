@@ -8,8 +8,14 @@
     text-align: right;
 }
 
+/*base min css override*/
+input[type=text], textarea {
+    padding: 6px 12px;
+}
+
 label {
     margin: 5px 15px 5px 0;
+    line-height: 1.7;
 }
 
 fieldset {
@@ -22,7 +28,8 @@ legend {
     margin: 0 0 10px;
 }
 
-table.table{
+table.table
+{
     margin-bottom:0;
 }
     table.table td input {
@@ -34,20 +41,101 @@ table.table{
         width:100%;
     }
 
+    form fieldset.fixed-width,
+    form fieldset .fixed-width {
+        width: 420px;
+    }
+
+/*css arrow right & down*/
+.arrow-downright
+{
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+
+    /*default*/
+    border-left: 6px solid rgb(51,51,51);
+
+    /*positioning*/
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.drawer-wrapper {
+    margin: 0;
+    /*height: 183px;*/
+}
 
 .drawer
 {
+    border-bottom: none;
     width: 1050px;
-    left: 129px;
+    /*height: 36px;*/
+
     position: relative;
+    left: 129px;
 }
     .drawer h2 {
-         text-align: center;
+        text-align: left;
+        padding: .75em 0;
+        font-size: 14px;
+        font-weight: 700;
     }
 
+    .drawer h2:hover,
+    .drawer h2.expand,
+    .drawer h2.expand:hover {
+        background-color: #fff;
+    }
+        /*create white background with black text to assimilate with header*/
+        .drawer h2 a,
+        .drawer h2.expand a {
+            background: none;
+            padding-left: 37px;
+
+            color: rgb(51,51,51);
+        }
+
+        .drawer h2.expand .arrow-downright {
+            border: 6px solid transparent;
+
+            /*expanded down arrow*/
+            border-top: 6px solid rgb(51,51,51);
+        }
+
+        .drawer h2 span.transactionLinks-right {
+            position: relative;
+            bottom:13px;
+
+            float: right;
+        }
+
+        .drawer h2.expand span.transactionLinks-right {
+            color: rgb(51,51,51);
+
+            /*position buttons to encompass entire form*/
+            top: 148px;
+        }
+            .drawer h2 span.transactionLinks-right a {
+                color: rgb(43,146,185);
+
+                background: none;
+                display: inline-block;
+                font-weight: 100;
+
+                padding: 0 10px;
+            }
+
+            .drawer h2 span.transactionLinks-right a:hover {
+                text-decoration: underline;
+            }
+
     .drawer ul {
-        padding-left: 13px;
+        padding-left: 11px;
         margin-top: 1em;
+
+        display: none;
     }
         .drawer ul li {
             list-style: none;
@@ -55,9 +143,134 @@ table.table{
         }
 
     .drawer .form-control {
-        width: 253px;
+        width: 255px;
     }
 
     .drawer #permanentDescription {
-        width: 1023px;
+        width: 773px;
     }
+
+#amountTotal-wrapper {
+    width: 1179px;
+    height: 100px;
+
+    position: relative;
+    top: 20px;
+}
+
+    #amountTotal
+    {
+        background: rgb(240,240,240);
+        color: rgb(51,51,51);
+        font-size: 13px;
+
+        height: 50px;
+        width: 1032px;
+        position: relative;
+        left: 139px;
+
+        overflow: hidden;
+    }
+        #amountTotal ul {
+            /*margin: 0 0 0 129px;*/
+            margin: 0;
+            padding: 0;
+
+            height: inherit;
+            line-height: 1;
+
+        }
+            #amountTotal ul li {
+                width: 253px;
+                height: 31px;
+
+                list-style: none;
+                display: inline-block;
+
+                font-weight: 700;
+                text-align: right;
+
+                padding-right: 10px;
+                /*border-right:1px solid #fff;*/
+            }
+
+            #amountTotal ul li.amounts {
+                padding: 8px 0 9px;
+            }
+
+                #amountTotal ul li.amounts input {
+                    width: 125px;
+                    padding: 10px;
+                }
+
+div#finalButtons-wrapper
+{
+    height: 15px;
+    padding-top: 5px;
+}
+
+    div#finalButtons-wrapper #finalButtons-right {
+        position: absolute;
+        margin: 0;
+        right: 10px;
+    }
+
+        div#finalButtons-wrapper #finalButtons-right #complete-approve {
+            background-color: rgb(238,119,3);
+            color: #fff;
+
+            border: none;
+        }
+
+/*double column fix*/
+form .dbl-col
+{
+    position: relative;
+    top: -192px;
+    left: 450px;
+}
+form .fixed-height
+{
+    height: 220px;
+}
+
+@media (max-width: 875px) {
+    form .dbl-col {
+        top: -48px;
+        left: 0;
+    }
+
+    form .fixed-height {
+        height: 400px;
+    }
+
+    form #responsive-emailName {
+        position: relative;
+        top: 144px;
+    }
+
+    form #responsive-emailTo {
+        position: relative;
+        top: 48px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .drawer {
+        left: 0;
+    }
+
+    #amountTotal {
+        left: 0;
+    }
+
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+        -webkit-overflow-scrolling: touch;
+    }
+}
