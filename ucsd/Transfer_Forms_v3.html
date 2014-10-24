@@ -19,6 +19,11 @@
     <link href="styles/base-min.css" rel="stylesheet"/>
     <link href="styles/tf-site-specific.css" rel="stylesheet"/>
 
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="http://qa.ucsd.edu/common/cwp/4.0.0/styles/ie-support.css"/>
+    <link rel="stylesheet" href="styles/tf-ie-support.css"/>
+    <![endif]-->
+
     <script src="http://qa.ucsd.edu/common/cwp/4.0.0/scripts/modernizr.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 </head>
@@ -119,7 +124,7 @@
 <h1>Transfer Funds</h1>
 
 <form role="form">
-<fieldset class="fixed-width fixed-height">
+<fieldset>
     <legend>Header</legend>
     <div class="cols_wrapper">
 
@@ -170,7 +175,7 @@
     </div>
 </fieldset>
 
-<fieldset class="fixed-width ie7-fix">
+<fieldset>
     <legend>Text</legend>
     <div class="form-group">
         <label for="documentText">Document Text</label>
@@ -231,7 +236,6 @@
     <a href="#" id="permanent-description-link">Permanent Description</a>
 
     <div id="permanent-description-detail" class="hidden">
-        <div class="arrow-downright show"></div>
         <div class="row">
             <div class="col-xs-6 col-sm-3">
                 <label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>
@@ -306,6 +310,8 @@
             </div>
         </div>
     </div>
+
+    <div class="arrow-downright show"></div>
     </section>
 </fieldset>
 

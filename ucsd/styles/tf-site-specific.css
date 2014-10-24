@@ -15,7 +15,7 @@
     top: -13px;
 }
 
-section #permanent-description-detail.hidden .arrow-downright {
+section #permanent-description-detail.hidden + .arrow-downright {
     border: 6px solid transparent;
 
     /*expanded down arrow*/
