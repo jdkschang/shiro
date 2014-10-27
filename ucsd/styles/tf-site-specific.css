@@ -21,8 +21,6 @@ section #permanent-description-detail.hidden + .arrow-downright {
 
     /*expanded down arrow*/
     border-left: 6px solid rgb(51,51,51);
-    display: block !important;
-    visibility: visible !important;
 }
 
 /*separate section to be added/copied/deleted */
