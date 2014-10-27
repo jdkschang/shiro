@@ -1,1 +1,8 @@
 *+html .col-sm-3 { width: 24%;}
+
+*+html label.sr-only {
+    position: relative;
+    width: 100px;
+    height: inherit;
+    margin: 0;
+}
