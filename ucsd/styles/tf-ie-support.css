@@ -3,6 +3,10 @@
 *+html label.sr-only {
     position: relative;
     width: 100px;
-    height: inherit;
+    height: 100%;
     margin: 0;
+}
+
+*+html .arrow-downright {
+    display: none;
 }
