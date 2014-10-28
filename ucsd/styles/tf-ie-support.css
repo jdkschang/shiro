@@ -10,3 +10,7 @@
 *+html .arrow-downright {
     display: none;
 }
+
+*+html .input-group-addon {
+    display: none;
+}

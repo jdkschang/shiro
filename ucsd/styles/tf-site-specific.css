@@ -48,6 +48,7 @@ section#detail-section-wrapper
 
     section table.table
     {
+        margin-bottom: 0;
     }
         table.table td input {
             width: 115px;
