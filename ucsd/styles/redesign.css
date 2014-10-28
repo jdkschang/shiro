@@ -222,6 +222,19 @@
       font-size: 21px;
     }
 
+    /*link wrapper banner background flush with page*/
+    #link-wrapper
+    {
+        background: #fafafa;
+    }
+
+        #link-wrapper ul#link-box {
+            background: #fff;
+        }
+
+            #link-wrapper #ela-box .ela-container {
+                background: #fafafa;
+            }
 #footer
 {
 }
@@ -279,6 +292,12 @@
 
     #nav-bar #give-now1 a {
         margin-top: 7px;
+    }
+}
+
+@media screen and (max-width: 964px) {
+    #link-wrapper ul#link-box li {
+        background: #fff;
     }
 }
 
