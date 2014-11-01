@@ -2,7 +2,8 @@
 # ignore the files below
 
 ucsd/.idea
-
+ucsd/projectFilesBackup
 rootkey.csv
 .sass-cache/
+
 
