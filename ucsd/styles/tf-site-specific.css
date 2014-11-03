@@ -85,6 +85,15 @@ section#detail-section-wrapper
 }
 
 
+/*final button*/
+#complete-approve {
+    background-color: rgb(238,119,3);
+    color: #fff;
+
+    border: none;
+}
+
+
 /*minimize needless padding in bootstrap columns */
 .col-sm-3
 {
