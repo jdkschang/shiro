@@ -1,4 +1,5 @@
-@charset "UTF-8";.sf-menu,.sf-menu * {
+@charset "UTF-8";
+.sf-menu,.sf-menu * {
     margin: 0;
     padding: 0;
     list-style: none
@@ -43,7 +44,7 @@
     -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.2);
     box-shadow: 2px 2px 6px rgba(0,0,0,.2);
     min-width: 12em;
-    *width: 12em
+    *width: 12em;
 }
 
 .sf-menu a {
@@ -726,10 +727,6 @@ html.no-csstransforms3d.no-csstransitions body.active #tdr_side_nav {
     body.collapse-nav #tdr_side_nav {
         display: block
     }
-}
-
-#tdr_wrapper {
-    overflow: hidden
 }
 
 .navbar {
