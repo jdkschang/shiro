@@ -1,8 +1,11 @@
 # shirou
 # ignore the files below
 
-ucsd/.idea
+dec4.5/.idea/workspace.xml
 
+ucsd/.idea
+ucsd/projectFilesBackup
 rootkey.csv
 .sass-cache/
+
 
