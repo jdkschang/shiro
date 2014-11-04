@@ -1,9 +1,12 @@
-<!doctype html>
-<html class="no-js" lang="en-US">
+<!DOCTYPE html>
+<!--[if IE 7 ]>
+<html class="ie7"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en-US"> <!--<![endif]-->
 <head>
     <title>Transfer Funds</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="robots" content="index,follow,noarchive">
     <meta name="ORGANIZATION" content="University of California, San Diego">
@@ -11,16 +14,17 @@
     <meta name="PAGETITLE" content="Transfer Funds">
     <meta name="DESCRIPTION" content="Transfer funds via this online form">
 
+    <link href="styles/bootstrap.css" rel="stylesheet"/>
+    <link href="styles/base-min.css" rel="stylesheet"/>
+    <link href="styles/tf-site-specific.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="styles/bootstrap.css"/>
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="http://qa.ucsd.edu/common/cwp/4.0.0/styles/ie-support.css"/>
+    <link rel="stylesheet" href="styles/tf-ie-support.css"/>
+    <![endif]-->
 
-    <link rel="stylesheet" href="styles/base-min.css"/>
-
-    <!-- Site-specific CSS files -->
-    <link rel="stylesheet" href="styles/site-specific.css"/>
-    <!-- End Site-specific CSS files -->
-
-    <script src="scripts/modernizr.js"></script>
+    <script src="http://qa.ucsd.edu/common/cwp/4.0.0/scripts/modernizr.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 </head>
 <body>
 
@@ -55,7 +59,6 @@
 
         </div>
     </div>
-
 
     <nav id="tdr_nav" class="navbar" role="navigation">
         <div id="tdr_nav_content">
@@ -93,7 +96,8 @@
                         </select>
 
                         <div class="input-group">
-                            <input placeholder="Search..." type="search" class="form-control search-term" id="q" name="search-term">
+                            <input placeholder="Search..." type="search" class="form-control search-term" id="q"
+                                   name="search-term">
                         </div>
                     </form>
                 </div>
@@ -115,48 +119,61 @@
 
 <main role="main" id="tdr_content">
 <div id="tdr_content_content">
-<h1>Transfer Funds</h1>
+<h1 id="top">Transfer Funds</h1>
 
 <form role="form">
-<fieldset class="fixed-width">
+<fieldset>
     <legend>Header</legend>
-    <div class="form-group">
-        <label for="documentNumber">Document Number</label>
-        <input type="text" class="form-control" id="documentNumber" value="  NEXT" disabled>
-    </div>
-    <div class="form-group">
-        <label for="briefDescription">Description</label>
-        <input type="text" class="form-control" id="briefDescription" placeholder="  brief information">
-    </div>
-    <div class="form-group">
-        <label for="transactionDate">Transaction Date</label>
-        <input type="date" class="form-control" id="transactionDate" placeholder="09/10/2014">
-    </div>
-    <div class="form-group">
-        <label for="documentTotal">Document Total</label>
-        <input type="number" class="form-control" id="documentTotal" placeholder="0.00">
-    </div>
-    <div class="form-group">
-        <label for="postingType">Posting Type</label>
-        <select id="postingType"class="form-control" name="postingType">
-            <option value="Immediate">Immediate</option>
-            <option value="Deferred">Deferred</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="currentTemplate">Current Template</label>
-        <select id="currentTemplate"class="form-control" name="currentTemplate">
-            <option value="2013">2013</option>
-            <option value="2014">2014</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="emailTo">Email To</label>
-        <input type="email" class="form-control" id="emailTo" placeholder="send@copyto.com">
+    <div class="cols_wrapper">
+
+        <div class="col_1_of_3 col">
+            <div class="form-group">
+                <label for="documentNumber">Document Number</label>
+                <input type="text" class="form-control" id="documentNumber" value="NEXT" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="transactionDate">Transaction Date</label>
+                <input type="date" class="form-control" id="transactionDate" placeholder="09/10/2014">
+            </div>
+            <div class="form-group">
+                <label for="documentTotal">Document Total</label>
+                <input type="number" class="form-control" id="documentTotal" placeholder="0.00">
+            </div>
+            <div class="form-group" id="responsive-emailName">
+                <label for="emailName">Send Copy To</label>
+                <input type="text" class="form-control" id="emailName" placeholder="John Doe">
+            </div>
+        </div>
+
+        <div class="col_2_of_3 col">
+            <div class="form-group">
+                <label for="briefDescription">Description</label>
+                <input type="text" class="form-control" id="briefDescription" placeholder="brief information">
+            </div>
+            <div class="form-group">
+                <label for="currentTemplate">Current Template</label>
+                <select id="currentTemplate" class="form-control" name="currentTemplate">
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="postingType">Posting Type</label>
+                <select id="postingType" class="form-control" name="postingType">
+                    <option value="Immediate">Immediate</option>
+                    <option value="Deferred">Deferred</option>
+                </select>
+            </div>
+            <div class="form-group" id="responsive-emailTo">
+                <label for="emailTo">Email To</label>
+                <input type="email" class="form-control" id="emailTo" placeholder="send@copyto.com">
+            </div>
+        </div>
     </div>
 </fieldset>
 
-<fieldset class="fixed-width">
+<fieldset>
     <legend>Text</legend>
     <div class="form-group">
         <label for="documentText">Document Text</label>
@@ -164,182 +181,554 @@
     </div>
 </fieldset>
 
+
 <fieldset>
     <legend>Details</legend>
-    <div class="form-group fixed-width">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" class="form-control" id="exampleInputFile">
-    </div>
-    <br/>
-
-    <!-- table layout -->
-    <div class="table-responsive">
-        <table class="table">
-            <tr>
-                <th>Sequence</th>
-                <th>Transfer Type</th>
-                <th>Index</th>
-                <th>Fund</th>
-                <th>Organization</th>
-                <th>Program</th>
-                <th>Account</th>
-                <th>Amount</th>
-                <th>Debit/Credit</th>
-            </tr>
-            <tr>
-                <td rowspan="2"><input type="text" placeholder="sequence"></td>
-                <td><input type="text" placeholder="B014"></td>
-                <td><input type="text" placeholder="index"></td>
-                <td><input type="text" placeholder="fund"></td>
-                <td><input type="text" placeholder="organization"></td>
-                <td><input type="text" placeholder="program"></td>
-                <td><input type="text" placeholder="account"></td>
-                <td><input type="text" placeholder="amount"></td>
-                <td><input type="text" placeholder="(+/-) indicator"></td>
-            </tr>
-            <tr> <!-- current description -->
-                <td colspan="8" class="tbl-description"><input type="text" placeholder="current description of funds"></td>
-            </tr>
-        </table>
+    <div class="form-group col_1_of_2 col">
+        <label for="inputFile">File input</label>
+        <!--class="form-control" for the box around the input-->
+        <input type="file" id="inputFile">
     </div>
 
-    <!--DRAWER SECTION-->
-    <!--PERMAANENT TEMPLATE INSERTED HERE-->
-    <div class="drawer">
-
-        <h2>
-            <div class="arrow-downright"></div>
-            <!--<div class="arrow-right"></div>-->
-            <a href="#">Permanent Description</a>
-                                <span class="transactionLinks-right">
-                                    <a href="#">Add</a>|
-                                    <a href="#">Copy</a>|
-                                    <a href="#">Refresh</a>
-                                </span>
-        </h2>
-
-        <ul>
-
-            <li>
-                <label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>
-                <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
-                    <option value="0 - Local Campus">0 - Local Campus</option>
-                    <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
-                </select>
-            </li>
-            <li>
-                <label for="subCampusCode" class="sr-only">Sub Campus Code</label>
-                <select id="subCampusCode" class="form-control" name="subCampusCode">
-                    <option value="1 - General Campus">1 - General Campus</option>
-                    <option value="2 - Health Sciences">2 - Health Sciences</option>
-                    <option value="3 - Marine Sciences">3 - Marine Sciences</option>
-                </select>
-            </li>
-            <li>
-                <label for="transactionClassCode" class="sr-only">Transaction Class Code</label>
-                <select id="transactionClassCode" class="form-control" name="transactionClassCode">
-                    <option value="A - Adjustment">A - Adjustment</option>
-                    <option value="I - Increment">I - Increment</option>
-                </select>
-            </li>
-            <li>
-                <label for="transactionTypeCode" class="sr-only">Transaction Type Code</label>
-                <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
-                    <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
-                    <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
-                    <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
-                    <option value="4 - Academic Merit">4 - Academic Merit</option>
-                    <option value="5 - Staff Merit">5 - Staff Merit</option>
-                    <option value="6 - Academic Range">6 - Academic Range</option>
-                    <option value="7 - Staff Range">7 - Staff Range</option>
-                    <option value="8 - Reclassification">8 - Reclassification</option>
-                    <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
-                    <option value="B - Other">B - Other</option>
-                    <option value="A - Salary Turnover">A - Salary Turnover</option>
-                    <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
-                </select>
-            </li>
-
-            <li>
-                <label for="fteAmount" class="sr-only">FTE Amount</label>
-                <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
-            </li>
-            <li>
-                <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
-                <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
-            </li>
-            <li>
-                <label for="permanentAmount" class="sr-only">Permanent Amount</label>
-                <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
-            </li>
-            <li>
-                <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
-                <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
-            </li>
-            <li id="permTempPosition">
-                <label for="permanentTemplate" class="sr-only">Permanent Template</label>
-                <select id="permanentTemplate" class="form-control" name="currentTemplate">
-                    <option value="" disabled selected>Permanent Template</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                </select>
-            </li>
-            <li>
-                <label for="permanentDescription" class="sr-only">Permanent Description</label>
-                <input type="text" class="form-control" id="permanentDescription" placeholder="  Permanent Description" maxlength="30">
-            </li>
-        </ul>
-
-    </div>
-
-    <!--Total Transaction | Amount Bar -->
-    <div id="amountTotal-wrapper">
-        <div id="amountTotal">
-            <ul>
-                <!--<li>-->
-                <!--Credit Amount-->
-                <!--</li>-->
-                <li class="amounts">
-                    <label for="creditAmount">Credit Amount</label>
-                    <input type="text" class="form-control" id="creditAmount" placeholder="$">
-                </li>
-                <!--<li>-->
-                <!--Debit Amount-->
-                <!--</li>-->
-                <li class="amounts">
-                    <label for="debitAmount">Debit Amount</label>
-                    <input type="text" class="form-control" id="debitAmount" placeholder="$">
-                </li>
-                <!--<li>-->
-                <!--Net Amount-->
-                <!--</li>-->
-                <li class="amounts">
-                    <label for="netAmount">Net Amount</label>
-                    <input type="text" class="form-control" id="netAmount" placeholder="$">
-                </li>
-                <!--<li>-->
-                <!--Total Amount-->
-                <!--</li>-->
-                <li class="amounts">
-                    <label for="totalAmount">Total Amount</label>
-                    <input type="text" class="form-control" id="totalAmount" placeholder="$">
-                </li>
-            </ul>
+    <section class="detail-section-wrapper">
+        <span class="transactionLinks-right pull-right">
+            <a href="#">Add</a>|
+            <a href="#">Copy</a>|
+            <a href="#">Delete</a>
+        </span>
+        <!-- table layout -->
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Sequence</th>
+                    <th>Transfer Type</th>
+                    <th>Index</th>
+                    <th>Fund</th>
+                    <th>Organization</th>
+                    <th>Program</th>
+                    <th>Account</th>
+                    <th>Amount</th>
+                    <th>Debit/Credit</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><input type="text" placeholder="sequence"></td>
+                    <td><input type="text" placeholder="B014"></td>
+                    <td><input type="text" placeholder="index"></td>
+                    <td><input type="text" placeholder="fund"></td>
+                    <td><input type="text" placeholder="organization"></td>
+                    <td><input type="text" placeholder="program"></td>
+                    <td><input type="text" placeholder="account"></td>
+                    <td><input type="text" placeholder="amount"></td>
+                    <td><input type="text" placeholder="(+/-) indicator"></td>
+                </tr>
+                <tr> <!-- current description -->
+                    <td colspan="8" class="tbl-description"><input type="text" placeholder="current description of funds">
+                    </td>
+                </tr>
+            </table>
         </div>
 
-        <div id="finalButtons-wrapper">
-            <div id="finalButtons-right">
-                <button type="reset" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-default">Complete</button>
-                <button type="submit" class="btn btn-default" id="complete-approve">Complete & Approve</button>
+
+        <div class="permanent-description-wrapper pull-right">
+        <a href="#" id="perm-desc-link-1" class="permanent-description-link">Permanent Information</a>
+
+        <div id="perm-desc-detail-1" class="permanent-description-detail hidden">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <!--<label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>-->
+                    <label for="systemWideAdminCode" class="sr-only">Sys. Admin.</label>
+                    <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
+                        <option value="0 - Local Campus">0 - Local Campus</option>
+                        <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <label for="subCampusCode" class="sr-only">Sub Campus</label>
+                    <select id="subCampusCode" class="form-control" name="subCampusCode">
+                        <option value="1 - General Campus">1 - General Campus</option>
+                        <option value="2 - Health Sciences">2 - Health Sciences</option>
+                        <option value="3 - Marine Sciences">3 - Marine Sciences</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <label for="transactionClassCode" class="sr-only">Trans. Class</label>
+                    <select id="transactionClassCode" class="form-control" name="transactionClassCode">
+                        <option value="A - Adjustment">A - Adjustment</option>
+                        <option value="I - Increment">I - Increment</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <label for="transactionTypeCode" class="sr-only">Trans. Type</label>
+                    <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
+                        <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
+                        <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
+                        <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
+                        <option value="4 - Academic Merit">4 - Academic Merit</option>
+                        <option value="5 - Staff Merit">5 - Staff Merit</option>
+                        <option value="6 - Academic Range">6 - Academic Range</option>
+                        <option value="7 - Staff Range">7 - Staff Range</option>
+                        <option value="8 - Reclassification">8 - Reclassification</option>
+                        <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
+                        <option value="B - Other">B - Other</option>
+                        <option value="A - Salary Turnover">A - Salary Turnover</option>
+                        <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <label for="fteAmount" class="sr-only">FTE Amount</label>
+                    <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
+                    <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <label for="permanentAmount" class="sr-only">Perm. Amount</label>
+                    <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
+                    <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <label for="permanentTemplate" class="sr-only">Perm. Template</label>
+                    <select id="permanentTemplate" class="form-control" name="currentTemplate">
+                        <option value="" disabled selected>Permanent Template</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                    </select>
+                </div>
+                <div class="col-sm-3 col-lg-9">
+                    <label for="permanentDescription" class="sr-only">Perm. Desc.</label>
+                    <input type="text" class="form-control" id="permanentDescription" placeholder="Permanent Description" maxlength="30">
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-downright"></div>
+        </div>
+    </section>
+
+    <section class="detail-section-wrapper">
+        <span class="transactionLinks-right pull-right">
+            <a href="#">Add</a>|
+            <a href="#">Copy</a>|
+            <a href="#">Delete</a>
+        </span>
+        <!-- table layout -->
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Sequence</th>
+                    <th>Transfer Type</th>
+                    <th>Index</th>
+                    <th>Fund</th>
+                    <th>Organization</th>
+                    <th>Program</th>
+                    <th>Account</th>
+                    <th>Amount</th>
+                    <th>Debit/Credit</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><input type="text" placeholder="sequence"></td>
+                    <td><input type="text" placeholder="B014"></td>
+                    <td><input type="text" placeholder="index"></td>
+                    <td><input type="text" placeholder="fund"></td>
+                    <td><input type="text" placeholder="organization"></td>
+                    <td><input type="text" placeholder="program"></td>
+                    <td><input type="text" placeholder="account"></td>
+                    <td><input type="text" placeholder="amount"></td>
+                    <td><input type="text" placeholder="(+/-) indicator"></td>
+                </tr>
+                <tr> <!-- current description -->
+                    <td colspan="8" class="tbl-description"><input type="text" placeholder="current description of funds">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="permanent-description-wrapper pull-right">
+            <a href="#" id="perm-desc-link-2" class="permanent-description-link">Permanent Information</a>
+
+            <div id="perm-desc-detail-2" class="permanent-description-detail hidden">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <!--<label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>-->
+                        <label for="systemWideAdminCode" class="sr-only">Sys. Admin.</label>
+                        <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
+                            <option value="0 - Local Campus">0 - Local Campus</option>
+                            <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="subCampusCode" class="sr-only">Sub Campus</label>
+                        <select id="subCampusCode" class="form-control" name="subCampusCode">
+                            <option value="1 - General Campus">1 - General Campus</option>
+                            <option value="2 - Health Sciences">2 - Health Sciences</option>
+                            <option value="3 - Marine Sciences">3 - Marine Sciences</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="transactionClassCode" class="sr-only">Trans. Class</label>
+                        <select id="transactionClassCode" class="form-control" name="transactionClassCode">
+                            <option value="A - Adjustment">A - Adjustment</option>
+                            <option value="I - Increment">I - Increment</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="transactionTypeCode" class="sr-only">Trans. Type</label>
+                        <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
+                            <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
+                            <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
+                            <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
+                            <option value="4 - Academic Merit">4 - Academic Merit</option>
+                            <option value="5 - Staff Merit">5 - Staff Merit</option>
+                            <option value="6 - Academic Range">6 - Academic Range</option>
+                            <option value="7 - Staff Range">7 - Staff Range</option>
+                            <option value="8 - Reclassification">8 - Reclassification</option>
+                            <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
+                            <option value="B - Other">B - Other</option>
+                            <option value="A - Salary Turnover">A - Salary Turnover</option>
+                            <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="fteAmount" class="sr-only">FTE Amount</label>
+                        <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
+                        <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="permanentAmount" class="sr-only">Perm. Amount</label>
+                        <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
+                        <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="permanentTemplate" class="sr-only">Perm. Template</label>
+                        <select id="permanentTemplate" class="form-control" name="currentTemplate">
+                            <option value="" disabled selected>Permanent Template</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 col-lg-9">
+                        <label for="permanentDescription" class="sr-only">Perm. Desc.</label>
+                        <input type="text" class="form-control" id="permanentDescription" placeholder="Permanent Description" maxlength="30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-downright"></div>
+        </div>
+    </section>
+
+    <section class="detail-section-wrapper">
+        <span class="transactionLinks-right pull-right">
+            <a href="#">Add</a>|
+            <a href="#">Copy</a>|
+            <a href="#">Delete</a>
+        </span>
+        <!-- table layout -->
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Sequence</th>
+                    <th>Transfer Type</th>
+                    <th>Index</th>
+                    <th>Fund</th>
+                    <th>Organization</th>
+                    <th>Program</th>
+                    <th>Account</th>
+                    <th>Amount</th>
+                    <th>Debit/Credit</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><input type="text" placeholder="sequence"></td>
+                    <td><input type="text" placeholder="B014"></td>
+                    <td><input type="text" placeholder="index"></td>
+                    <td><input type="text" placeholder="fund"></td>
+                    <td><input type="text" placeholder="organization"></td>
+                    <td><input type="text" placeholder="program"></td>
+                    <td><input type="text" placeholder="account"></td>
+                    <td><input type="text" placeholder="amount"></td>
+                    <td><input type="text" placeholder="(+/-) indicator"></td>
+                </tr>
+                <tr> <!-- current description -->
+                    <td colspan="8" class="tbl-description"><input type="text" placeholder="current description of funds">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="permanent-description-wrapper pull-right">
+            <a href="#" id="perm-desc-link-3" class="permanent-description-link">Permanent Information</a>
+
+            <div id="perm-desc-detail-3" class="permanent-description-detail hidden">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <!--<label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>-->
+                        <label for="systemWideAdminCode" class="sr-only">Sys. Admin.</label>
+                        <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
+                            <option value="0 - Local Campus">0 - Local Campus</option>
+                            <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="subCampusCode" class="sr-only">Sub Campus</label>
+                        <select id="subCampusCode" class="form-control" name="subCampusCode">
+                            <option value="1 - General Campus">1 - General Campus</option>
+                            <option value="2 - Health Sciences">2 - Health Sciences</option>
+                            <option value="3 - Marine Sciences">3 - Marine Sciences</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="transactionClassCode" class="sr-only">Trans. Class</label>
+                        <select id="transactionClassCode" class="form-control" name="transactionClassCode">
+                            <option value="A - Adjustment">A - Adjustment</option>
+                            <option value="I - Increment">I - Increment</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="transactionTypeCode" class="sr-only">Trans. Type</label>
+                        <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
+                            <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
+                            <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
+                            <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
+                            <option value="4 - Academic Merit">4 - Academic Merit</option>
+                            <option value="5 - Staff Merit">5 - Staff Merit</option>
+                            <option value="6 - Academic Range">6 - Academic Range</option>
+                            <option value="7 - Staff Range">7 - Staff Range</option>
+                            <option value="8 - Reclassification">8 - Reclassification</option>
+                            <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
+                            <option value="B - Other">B - Other</option>
+                            <option value="A - Salary Turnover">A - Salary Turnover</option>
+                            <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="fteAmount" class="sr-only">FTE Amount</label>
+                        <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
+                        <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="permanentAmount" class="sr-only">Perm. Amount</label>
+                        <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
+                        <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="permanentTemplate" class="sr-only">Perm. Template</label>
+                        <select id="permanentTemplate" class="form-control" name="currentTemplate">
+                            <option value="" disabled selected>Permanent Template</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 col-lg-9">
+                        <label for="permanentDescription" class="sr-only">Perm. Desc.</label>
+                        <input type="text" class="form-control" id="permanentDescription" placeholder="Permanent Description" maxlength="30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-downright"></div>
+        </div>
+    </section>
+
+    <section class="detail-section-wrapper">
+        <span class="transactionLinks-right pull-right">
+            <a href="#">Add</a>|
+            <a href="#">Copy</a>|
+            <a href="#">Delete</a>
+        </span>
+        <!-- table layout -->
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Sequence</th>
+                    <th>Transfer Type</th>
+                    <th>Index</th>
+                    <th>Fund</th>
+                    <th>Organization</th>
+                    <th>Program</th>
+                    <th>Account</th>
+                    <th>Amount</th>
+                    <th>Debit/Credit</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><input type="text" placeholder="sequence"></td>
+                    <td><input type="text" placeholder="B014"></td>
+                    <td><input type="text" placeholder="index"></td>
+                    <td><input type="text" placeholder="fund"></td>
+                    <td><input type="text" placeholder="organization"></td>
+                    <td><input type="text" placeholder="program"></td>
+                    <td><input type="text" placeholder="account"></td>
+                    <td><input type="text" placeholder="amount"></td>
+                    <td><input type="text" placeholder="(+/-) indicator"></td>
+                </tr>
+                <tr> <!-- current description -->
+                    <td colspan="8" class="tbl-description"><input type="text" placeholder="current description of funds">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="permanent-description-wrapper pull-right">
+            <a href="#" id="perm-desc-link-4" class="permanent-description-link">Permanent Information</a>
+
+            <div id="perm-desc-detail-4" class="permanent-description-detail hidden">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <!--<label for="systemWideAdminCode" class="sr-only">Systemwide Administrative Code</label>-->
+                        <label for="systemWideAdminCode" class="sr-only">Sys. Admin.</label>
+                        <select id="systemWideAdminCode" class="form-control" name="systemWideAdminCode">
+                            <option value="0 - Local Campus">0 - Local Campus</option>
+                            <option value="5 - System Wide Programs">5 - Systemwide Programs</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="subCampusCode" class="sr-only">Sub Campus</label>
+                        <select id="subCampusCode" class="form-control" name="subCampusCode">
+                            <option value="1 - General Campus">1 - General Campus</option>
+                            <option value="2 - Health Sciences">2 - Health Sciences</option>
+                            <option value="3 - Marine Sciences">3 - Marine Sciences</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="transactionClassCode" class="sr-only">Trans. Class</label>
+                        <select id="transactionClassCode" class="form-control" name="transactionClassCode">
+                            <option value="A - Adjustment">A - Adjustment</option>
+                            <option value="I - Increment">I - Increment</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="transactionTypeCode" class="sr-only">Trans. Type</label>
+                        <select id="transactionTypeCode" class="form-control" name="transactionTypeCode">
+                            <option value="1 - Detail Budget Worksheet">1 - Detail Budget Worksheet</option>
+                            <option value="2 - Interlocation Transfers">2 - Interlocation Transfers</option>
+                            <option value="3 - Regent's/Presidents Actions">3 - Regent's/Presidents Actions</option>
+                            <option value="4 - Academic Merit">4 - Academic Merit</option>
+                            <option value="5 - Staff Merit">5 - Staff Merit</option>
+                            <option value="6 - Academic Range">6 - Academic Range</option>
+                            <option value="7 - Staff Range">7 - Staff Range</option>
+                            <option value="8 - Reclassification">8 - Reclassification</option>
+                            <option value="9 - Six month & Trainee Increase">9 - Six month & Trainee Increase</option>
+                            <option value="B - Other">B - Other</option>
+                            <option value="A - Salary Turnover">A - Salary Turnover</option>
+                            <option value="A1 - Salary reconciliation during FINAL STAFFING">A1 - Salary reconciliation during FINAL STAFFING</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="fteAmount" class="sr-only">FTE Amount</label>
+                        <input type="email" class="form-control" id="fteAmount" placeholder="FTE Amount">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="indicatorOne" class="sr-only">(+/-) Indicator</label>
+                        <input type="email" class="form-control" id="indicatorOne" placeholder="(+/-) Indicator" maxlength="1">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="permanentAmount" class="sr-only">Perm. Amount</label>
+                        <input type="email" class="form-control" id="permanentAmount" placeholder="Permanent Amount">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="indicatorTwo" class="sr-only">(+/-) Indicator</label>
+                        <input type="email" class="form-control" id="indicatorTwo" placeholder="(+/-) Indicator" maxlength="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="permanentTemplate" class="sr-only">Perm. Template</label>
+                        <select id="permanentTemplate" class="form-control" name="currentTemplate">
+                            <option value="" disabled selected>Permanent Template</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 col-lg-9">
+                        <label for="permanentDescription" class="sr-only">Perm. Desc.</label>
+                        <input type="text" class="form-control" id="permanentDescription" placeholder="Permanent Description" maxlength="30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-downright"></div>
+        </div>
+    </section>
+</fieldset>
+
+<a href="#top" class="scrollToTop">scroll to top</a>
+
+<div id="amountTotal-wrapper" class="row">
+    <div id="amountTotal" class="input-group">
+        <div class="col-xs-6 col-sm-3">
+            <div class="form-group input-group">
+                <label for="creditAmount" class="sr-only">Credit Amount</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="creditAmount" placeholder="Credit Amount">
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <div class="form-group input-group">
+                <label for="debitAmount" class="sr-only">Debit Amount</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="debitAmount" placeholder="Debit Amount">
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <div class="form-group input-group">
+                <label for="netAmount" class="sr-only">Net Amount</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="netAmount" placeholder="Net Amount">
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <div class="form-group input-group">
+                <label for="totalAmount" class="sr-only">Total Amount</label>
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="totalAmount" placeholder="Total Amount">
             </div>
         </div>
     </div>
+</div>
 
 
-</fieldset>
+<div class="pull-right">
+    <button type="reset" class="btn btn-default">Cancel</button>
+    <button type="submit" class="btn btn-default">Complete</button>
+    <button type="submit" class="btn btn-default" id="complete-approve">Complete & Approve</button>
+</div>
 </form>
 </div>
+
+
+
 </main>
 
 <!-- Footer
@@ -403,9 +792,9 @@
     // ]]>
 </script>
 
-<script src="scripts/vendor.js"></script>
+<script src="http://qa.ucsd.edu/common/cwp/4.0.0/scripts/vendor.js"></script>
 
-<script src="scripts/base-min.js"></script>
+<script src="http://qa.ucsd.edu/common/cwp/4.0.0/scripts/base-min.js"></script>
 
 <!-- Google Search -->
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -419,6 +808,19 @@ google.setOnLoadCallback(function () {
 });
 // ]]></script>
 <script src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>
+
+<script>
+    $(function() {
+        $('[id^="perm-desc-link-"]').on('click', function() {
+
+            var id = this.id;
+            var num = id.charAt(id.length-1);
+            $('#perm-desc-detail-'+num).toggleClass('hidden');
+            return false;
+        });
+    });
+
+</script>
 
 </body>
 </html>
