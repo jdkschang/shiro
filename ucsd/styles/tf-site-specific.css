@@ -15,6 +15,17 @@
     top: -127px;
 }
 
+.cols_wrapper .col_2_of_2 {
+    float: left;
+}
+
+form .control-label {
+    /*instead of form-horizontal*/
+    text-align: right;
+    /*fixes label-input alignment issue*/
+    margin-top: 7px;
+}
+
 section .permanent-description-detail.hidden + .arrow-downright {
     top: -16px;
     border: 6px solid transparent;
@@ -27,13 +38,15 @@ section .permanent-description-detail.hidden + .arrow-downright {
 section.detail-section-wrapper
 {
     position: relative;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
+    /*more height concise styling for smaller monitors*/
+    margin-top:42px;
 }
 
     section .transactionLinks-right
     {
         position:relative;
-        top:-20px;
+        top:-16px; /* align with file input section */
     }
         section .transactionLinks-right a {
             color: rgb(43,146,185);
@@ -58,7 +71,8 @@ section.detail-section-wrapper
     .permanent-description-wrapper
     {
         width: 88.5%;
-        margin-bottom: 20px;
+        /*padding unnecessary due to changes in back to top */
+        /*margin-bottom: 20px;*/
     }
     section .permanent-description-link
     {
@@ -83,17 +97,13 @@ section.detail-section-wrapper
 
 #amountTotal-wrapper
 {
-    margin: 30px 0 10px;
-}
-
-#complete-approve {
-    background-color: #428bca;
-    border-color: #357ebd;
-    color: #fff;
+    margin: 20px 0 10px;
 }
 
 /*final button*/
 #complete-approve {
+    /*background-color: #428bca;*/
+    /*border-color: #357ebd;*/
     background-color: rgb(238,119,3);
     color: #fff;
 
@@ -111,7 +121,20 @@ section.detail-section-wrapper
     float:right;
     text-decoration: none;
     cursor: pointer;
+
+    background: url('images/green_circle-arrow_up.png') no-repeat;
+    opacity: 0.5;
+
+    height: 40px;
+    width: 40px;
+
+    position: fixed;
+    top: 90%;
+    right: 0.5%;
+
+    z-index: 3; /* higher than input box zindex*/
 }
 .scrollToTop:hover {
-    color: #428bca;
+    /*background: url('images/hover-arrow_up.png') no-repeat;*/
+    opacity: 0.9;
 }
