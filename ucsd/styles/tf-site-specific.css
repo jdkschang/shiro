@@ -15,7 +15,7 @@
     top: -127px;
 }
 
-section #permanent-description-detail.hidden + .arrow-downright {
+section .permanent-description-detail.hidden + .arrow-downright {
     top: -16px;
     border: 6px solid transparent;
 
@@ -24,7 +24,7 @@ section #permanent-description-detail.hidden + .arrow-downright {
 }
 
 /*separate section to be added/copied/deleted */
-section#detail-section-wrapper
+section.detail-section-wrapper
 {
     position: relative;
     margin-top: 80px;
@@ -32,9 +32,8 @@ section#detail-section-wrapper
 
     section .transactionLinks-right
     {
-        float: right;
-        position: relative;
-        top: -20px;
+        position:relative;
+        top:-20px;
     }
         section .transactionLinks-right a {
             color: rgb(43,146,185);
@@ -52,13 +51,16 @@ section#detail-section-wrapper
     }
         table.table td input {
             width: 115px;
-            /*padding-left: 10px;*/
         }
         table.table td.tbl-description input {
             width:100%;
         }
-
-    section #permanent-description-link
+    .permanent-description-wrapper
+    {
+        width: 88.5%;
+        margin-bottom: 20px;
+    }
+    section .permanent-description-link
     {
         text-decoration: none;
         color: rgb(51,51,51);
@@ -68,11 +70,11 @@ section#detail-section-wrapper
         margin-left: 20px;
     }
 
-    section #permanent-description-detail
+    section .permanent-description-detail
     {
     }
         /*align width of input boxes and center, fixes overflow on the sides*/
-        section #permanent-description-detail .row {
+        section .permanent-description-detail .row {
             width: 100%;
             margin: 0 auto;
         }
@@ -84,6 +86,11 @@ section#detail-section-wrapper
     margin: 30px 0 10px;
 }
 
+#complete-approve {
+    background-color: #428bca;
+    border-color: #357ebd;
+    color: #fff;
+}
 
 /*final button*/
 #complete-approve {
@@ -98,4 +105,13 @@ section#detail-section-wrapper
 .col-sm-3
 {
     padding: 2px 3px;
+}
+
+.scrollToTop {
+    float:right;
+    text-decoration: none;
+    cursor: pointer;
+}
+.scrollToTop:hover {
+    color: #428bca;
 }
