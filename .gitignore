@@ -1,7 +1,8 @@
 # shirou
 # ignore the files below
 
-dec4.5/.idea/workspace.xml
+dec4.5/.idea/
+dec4.5/projectFilesBackup
 
 ucsd/.idea
 ucsd/projectFilesBackup
