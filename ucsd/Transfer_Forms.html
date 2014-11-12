@@ -127,7 +127,7 @@
 
     <div class="cols_wrapper">
 
-        <div class="col_1_of_3 col">
+        <div class="col_1_of_2 col">
             <div class="form-group">
                 <label for="documentNumber" class="col-sm-6 control-label">Document Number</label>
                 <div class="col-sm-6">
@@ -158,14 +158,14 @@
 
         <div class="col_2_of_2 col">
             <div class="form-group">
-                <label for="briefDescription" class="col-sm-4 control-label">Description</label>
-                <div class="col-sm-8">
+                <label for="briefDescription" class="col-sm-6 control-label">Description</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="briefDescription" placeholder="brief information" maxlength="35">
                 </div>
             </div>
             <div class="form-group">
-                <label for="currentTemplate" class="col-sm-4 control-label">Current Template</label>
-                <div class="col-sm-8">
+                <label for="currentTemplate" class="col-sm-6 control-label">Current Template</label>
+                <div class="col-sm-6">
                     <select id="currentTemplate" class="form-control" name="currentTemplate">
                         <option value="2013">2013</option>
                         <option value="2014">2014</option>
@@ -173,8 +173,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="postingType" class="col-sm-4 control-label">Posting Type</label>
-                <div class="col-sm-8">
+                <label for="postingType" class="col-sm-6 control-label">Posting Type</label>
+                <div class="col-sm-6">
                     <select id="postingType" class="form-control" name="postingType">
                         <option value="Immediate">Immediate</option>
                         <option value="Deferred">Deferred</option>
@@ -182,8 +182,8 @@
                 </div>
             </div>
             <div class="form-group" id="responsive-emailTo">
-                <label for="emailTo" class="col-sm-4 control-label">Email To</label>
-                <div class="col-sm-8">
+                <label for="emailTo" class="col-sm-6 control-label">Email To</label>
+                <div class="col-sm-6">
                     <input type="email" class="form-control" id="emailTo" placeholder="send@copyto.com">
                 </div>
             </div>
@@ -462,20 +462,7 @@ google.setOnLoadCallback(function () {
 <script src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>
 
 <!--script to toggle hide/show for the permanent information section-->
-<script>
-    $(function() {
-        // this should work for 'n' permanent info sections
-        // where n is the number of sections added/copied unto the page
-        $('[id^="perm-desc-link-"]').on('click', function() { // id's and selects the permanent information section
-
-            var id = this.id; // stores the id of the section clicked
-            var num = id.charAt(id.length-1); // extracts the section number which was clicked on
-            $('#perm-desc-detail-'+num).toggleClass('hidden');  // selects the section + the section number and toggles the show/hide
-            return false;
-        });
-    });
-
-</script>
+<script src="scripts/site-specific.js" type="text/javascript"></script>
 
 </body>
 </html>

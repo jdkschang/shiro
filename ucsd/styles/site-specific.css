@@ -15,10 +15,6 @@
     top: -127px;
 }
 
-.cols_wrapper .col_2_of_2 {
-    float: left;
-}
-
 form .control-label {
     /*instead of form-horizontal*/
     text-align: right;
