@@ -24,3 +24,11 @@
     width:46%;
     padding-left:0 !important;
 }
+
+*+html .col-sm-4 {
+    padding-left: 0 !important;
+}
+
+*+html .col-sm-8 {
+    width: 55%;
+}
