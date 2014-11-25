@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 7 ]>
-<html class="ie7"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en-US"> <!--<![endif]-->
+<html class="no-js" lang="en-US">
 <head>
     <title>Transfer Funds</title>
     <meta charset="utf-8">
@@ -462,20 +459,7 @@ google.setOnLoadCallback(function () {
 <script src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en" type="text/javascript"></script>
 
 <!--script to toggle hide/show for the permanent information section-->
-<script>
-    $(function() {
-        // this should work for 'n' permanent info sections
-        // where n is the number of sections added/copied unto the page
-        $('[id^="perm-desc-link-"]').on('click', function() { // id's and selects the permanent information section
-
-            var id = this.id; // stores the id of the section clicked
-            var num = id.charAt(id.length-1); // extracts the section number which was clicked on
-            $('#perm-desc-detail-'+num).toggleClass('hidden');  // selects the section + the section number and toggles the show/hide
-            return false;
-        });
-    });
-
-</script>
+<script src="scripts/site-specific.js" type="text/javascript"></script>
 
 </body>
 </html>

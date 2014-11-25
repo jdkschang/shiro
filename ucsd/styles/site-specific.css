@@ -99,6 +99,9 @@ section.detail-section-wrapper
 {
     margin: 20px 0 10px;
 }
+    #amountTotal {
+        width: 100%;
+    }
 
 /*final button*/
 #complete-approve {
