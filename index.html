@@ -18,7 +18,6 @@
     <script src="js/libs/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
         $(function() {
-            initHoverBoxes();
             $(window).scroll( function() {
                 var y_scroll_pos = window.pageYOffset;
                 // scroll top arrow
@@ -49,21 +48,6 @@
                 }
             });
         });
-
-        function initHoverBoxes() {
-          var $column = $('.column');
-
-          $column.mouseenter(function() {
-            $column.removeClass('wide');
-            $column.css('width', '15%');
-            $(this).addClass('wide');
-          });
-
-          $column.mouseleave(function() {
-            $column.css('width', '20%');
-            $column.removeClass('wide');
-          });
-        }
     </script>
 </head>
 <body>
