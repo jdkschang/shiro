@@ -1,0 +1,34 @@
+*+html .col-sm-3 { width: 24%;}
+
+*+html label.sr-only {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    margin: 0;
+}
+
+*+html .arrow-downright {
+    display: none;
+}
+
+*+html .input-group-addon {
+    display: none;
+}
+
+/* fix padding box model issue */
+*+html input {
+    padding: 0 !important;
+}
+
+*+html .col-sm-6 {
+    width:46%;
+    padding-left:0 !important;
+}
+
+*+html .col-sm-4 {
+    padding-left: 0 !important;
+}
+
+*+html .col-sm-8 {
+    width: 55%;
+}

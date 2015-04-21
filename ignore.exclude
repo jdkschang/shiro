@@ -1,0 +1,17 @@
+# excluding
+# .git/ directory 
+# .idea/ directory
+# and scss files
+.git/*
+.gitignore
+
+.idea/*
+
+backbonejs/*
+
+*.scss
+rootkey.csv
+server.js
+
+# meta
+ignore.exclude

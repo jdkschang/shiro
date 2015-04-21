@@ -1,0 +1,46 @@
+/*IE 7 & 8 SUPPORT*/
+
+.form-control {
+    width/*\**/: 55%;
+    text-align/*\**/: left;
+}
+
+*+html label { margin/*\**/: 0; text-align/*\**/: left; float/*\**/: left; width/*\**/: 210px; height/*\**/: 35px;}
+*+html .form-group input { margin/*\**/: 0 !important; padding/*\**/: 0 !important;}
+
+
+
+
+*+html .dbl-col { top/*\**/: -140px; left/*\**/: 525px;}
+
+form fieldset.fixed-width,
+form fieldset .fixed-width {
+width/*\**/: 480px;
+}
+
+form fieldset.fixed-height {
+height/*\**/: 285px;
+}
+
+*+html form fieldset.ie7-fix {
+position/*\**/: relative;
+left/*\**/: -484px;
+}
+
+*+html form textarea { padding/*\**/: 0 !important; }
+
+*+html table td input { padding: 6px 0 !important; }
+
+*+html .drawer ul li { display/*\**/: inline; width: 245px !important;}
+*+html .drawer ul li select { float: left; margin: 0; padding: 0; width: 245px !important; }
+*+html .drawer ul li input { float: left; margin: 0; padding: 0; width: 245px !important;}
+
+*+html #amountTotal ul li { display: inline; padding/*\**/:8px 2px 9px !important;}
+
+*+html form .amounts label {
+    width/*\**/: 110px;
+}
+
+*+html form .amounts input {
+    padding/*\**/: 0 !important;
+}

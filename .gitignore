@@ -1,6 +1,16 @@
-# shiro 
+# shirou
 # ignore the files below
+
+dec4.5/.idea/
+dec4.5/projectFilesBackup
+
+ucsd/.idea
+ucsd/projectFilesBackup
+
+phoneStatus/.idea
+phoneStatus/projectFilesBackup
+
+rootkey.csv
 .sass-cache/
-encore/
-node/
+
 .idea/
