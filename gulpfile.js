@@ -1,6 +1,6 @@
 var gulp    = require('gulp'),
-    uglify  = require('gulp-uglify');
+    gutil   = require('gulp-util');
 
-gulp.task('minify', function() {
-    gulp.src('js/')
+gulp.task('default', function() {
+    return gutil.log('Gulp is running!')
 });
