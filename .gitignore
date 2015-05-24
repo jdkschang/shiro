@@ -3,7 +3,8 @@
 
 rootkey.csv
 
-app/*.map
+*.map
+
 
 .idea/
 dist/
