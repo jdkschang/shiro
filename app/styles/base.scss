@@ -1,9 +1,13 @@
 @import "variables";
 
+// 3rd party libraries
 @import "../libs/skeleton-sass/skeleton";
 @import "../libs/fa-scss/font-awesome";
+
+// base
 @import "layout.scss";
 @import "modules.scss";
+@import "animation.scss";
 
 a, a:visited {
   text-decoration: none;

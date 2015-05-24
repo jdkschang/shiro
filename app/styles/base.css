@@ -2590,8 +2590,7 @@ input[type="checkbox"] {
       .m-social .social-list > li:hover, .m-social .social-list > li:active, .m-social .social-list > li:focus {
         color: #fff; }
       .m-social .social-list > li i:hover:before {
-        display: inline-block;
-        transform: rotate(20deg); }
+        display: inline-block; }
       .m-social .social-list > li span {
         display: inline-block;
         font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -2605,6 +2604,43 @@ input[type="checkbox"] {
         content: " github"; }
       .m-social .social-list > li .fa-linkedin:hover span:after {
         content: " linkedin"; }
+
+/* responsive breakpoints */
+/* animation */
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(5deg);
+    opacity: 0; }
+  80% {
+    transform: rotate(15deg);
+    opacity: 0.5; }
+  100% {
+    transform: rotate(5deg);
+    opacity: 1; } }
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(5deg);
+    opacity: 0; }
+  80% {
+    transform: rotate(15deg);
+    opacity: 0.5; }
+  100% {
+    transform: rotate(5deg);
+    opacity: 1; } }
+@keyframes rotate {
+  0% {
+    transform: rotate(5deg);
+    opacity: 0; }
+  80% {
+    transform: rotate(15deg);
+    opacity: 0.5; }
+  100% {
+    transform: rotate(5deg);
+    opacity: 1; } }
+.m-social .social-list li:hover i:before {
+  -webkit-animation: rotate 1s .5;
+  -moz-animation: rotate 1s .5;
+  animation: rotate 1s .5; }
 
 a, a:visited {
   text-decoration: none; }

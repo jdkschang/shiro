@@ -1,0 +1,11 @@
+@import "variables";
+
+@include keyframes(rotate) {
+  0% { transform: rotate(5deg); opacity:0; }
+  80% { transform: rotate(15deg); opacity:0.5; }
+  100% { transform: rotate(5deg); opacity:1; }
+}
+
+.m-social .social-list li:hover i:before {
+  @include animation('rotate 1s .5');
+}
