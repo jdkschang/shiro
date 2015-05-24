@@ -4,3 +4,42 @@ $desktop:     960px;
 $tablet:      768px;
 $phablet:     550px;
 $mobile:      420px;
+
+@mixin bp-hddesktop {
+  @media only screen and (min-width: $hd-desktop) {
+    @content;
+  }
+}
+
+@mixin bp-tablet{
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+/* animation */
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}

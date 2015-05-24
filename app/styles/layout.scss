@@ -3,28 +3,29 @@
 .l-container {
   max-width: $desktop;
   width: 98%;
+
   margin: auto;
+  padding: 2rem 0;
   overflow: hidden;
 
   // screen smaller than tablet
-  @media only screen and (max-width: $tablet) {
+  @include bp-tablet {
     width: 94%;
   }
 
   // screen larger than hd-desktop
-  @media only screen and (min-width: $hd-desktop) {
+  @include bp-hddesktop {
     max-width: $hd-desktop;
   }
 }
 
 .l-header
 {
-
+  background: #0FA0CE;
 }
 
 .l-main
 {
-
 }
 
 .l-footer

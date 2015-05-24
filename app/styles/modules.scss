@@ -1,10 +1,58 @@
 .m-title
 {
-  .title-header {
+  float: left;
 
+  .title-header {
+    color: #fff;
+    font-size: 4rem;
   }
+}
+.m-social {
+  float: right;
 
   .social-list {
+    margin: 0;
 
+    > li {
+      display: inline-block;
+      margin: 0 0 0 2rem;
+
+      cursor: pointer;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &:hover, &:active, &:focus {
+        color: #fff;
+      }
+
+      i:hover:before {
+        display: inline-block;
+        transform: rotate(20deg);
+      }
+
+      span {
+        display: inline-block;
+        font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .fa-file:hover span:after {
+        content: " resume";
+      }
+      .fa-envelope:hover span:after {
+        content: " email";
+      }
+      .fa-twitter:hover span:after {
+        content: " twitter"
+      }
+      .fa-github:hover span:after {
+        content: " github"
+      }
+      .fa-linkedin:hover span:after {
+        content: " linkedin"
+      }
+
+
+    }
   }
 }
