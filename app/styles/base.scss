@@ -3,3 +3,7 @@
 @import "../libs/skeleton-sass/skeleton";
 @import "layout.scss";
 @import "modules.scss";
+
+a, a:visited {
+  text-decoration: none;
+}

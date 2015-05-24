@@ -1,7 +1,20 @@
 @import "variables";
 
 .l-container {
-  width: $desktop;
+  max-width: $desktop;
+  width: 98%;
+  margin: auto;
+  overflow: hidden;
+
+  // screen smaller than tablet
+  @media only screen and (max-width: $tablet) {
+    width: 94%;
+  }
+
+  // screen larger than hd-desktop
+  @media only screen and (min-width: $hd-desktop) {
+    max-width: $hd-desktop;
+  }
 }
 
 .l-header
