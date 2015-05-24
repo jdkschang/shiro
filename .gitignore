@@ -3,6 +3,8 @@
 
 rootkey.csv
 
+app/*.map
+
 .idea/
 dist/
 node_modules/
