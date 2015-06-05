@@ -2584,13 +2584,15 @@ input[type="checkbox"] {
     .m-social .social-list > li {
       display: inline-block;
       margin: 0 0 0 2rem;
+      color: #fff;
       cursor: pointer; }
       .m-social .social-list > li:first-child {
         margin: 0; }
       .m-social .social-list > li:hover, .m-social .social-list > li:active, .m-social .social-list > li:focus {
-        color: #fff; }
+        color: #444; }
       .m-social .social-list > li i:hover:before {
-        display: inline-block; }
+        display: inline-block;
+        transform: rotate(25deg); }
       .m-social .social-list > li span {
         display: inline-block;
         font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -2609,38 +2611,47 @@ input[type="checkbox"] {
 /* animation */
 @-webkit-keyframes rotate {
   0% {
-    transform: rotate(5deg);
+    transform: rotate(0deg);
     opacity: 0; }
-  80% {
-    transform: rotate(15deg);
+  40% {
+    transform: rotate(10deg);
     opacity: 0.5; }
+  80% {
+    transform: rotate(20deg);
+    opacity: 0.9; }
   100% {
-    transform: rotate(5deg);
+    transform: rotate(25deg);
     opacity: 1; } }
 @-moz-keyframes rotate {
   0% {
-    transform: rotate(5deg);
+    transform: rotate(0deg);
     opacity: 0; }
-  80% {
-    transform: rotate(15deg);
+  40% {
+    transform: rotate(10deg);
     opacity: 0.5; }
+  80% {
+    transform: rotate(20deg);
+    opacity: 0.9; }
   100% {
-    transform: rotate(5deg);
+    transform: rotate(25deg);
     opacity: 1; } }
 @keyframes rotate {
   0% {
-    transform: rotate(5deg);
+    transform: rotate(0deg);
     opacity: 0; }
-  80% {
-    transform: rotate(15deg);
+  40% {
+    transform: rotate(10deg);
     opacity: 0.5; }
+  80% {
+    transform: rotate(20deg);
+    opacity: 0.9; }
   100% {
-    transform: rotate(5deg);
+    transform: rotate(25deg);
     opacity: 1; } }
 .m-social .social-list li:hover i:before {
-  -webkit-animation: rotate 1s .5;
-  -moz-animation: rotate 1s .5;
-  animation: rotate 1s .5; }
+  -webkit-animation: rotate 0.5s ease-in-out;
+  -moz-animation: rotate 0.5s ease-in-out;
+  animation: rotate 0.5s ease-in-out; }
 
 a, a:visited {
   text-decoration: none; }

@@ -17,6 +17,7 @@
       display: inline-block;
       margin: 0 0 0 2rem;
 
+      color: #fff;
       cursor: pointer;
 
       &:first-child {
@@ -24,12 +25,12 @@
       }
 
       &:hover, &:active, &:focus {
-        color: #fff;
+        color: #444;
       }
 
       i:hover:before {
         display: inline-block;
-//        transform: rotate(20deg);
+        transform: rotate(25deg);
       }
 
       span {
