@@ -5,9 +5,9 @@
 @import "../libs/fa-scss/font-awesome";
 
 // base
-@import "layout.scss";
-@import "modules.scss";
-@import "animation.scss";
+@import "layout";
+@import "modules";
+@import "animation";
 
 a, a:visited {
   text-decoration: none;
