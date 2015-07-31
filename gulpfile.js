@@ -1,4 +1,5 @@
 var gulp    = require('gulp'),
+    eslint  = require('gulp-eslint'),
     clean   = require('gulp-clean'),
     jshint  = require('gulp-jshint'),
     concat  = require('gulp-concat'),
