@@ -25,6 +25,12 @@ gulp.task('clean', function() {
               .pipe(clean());
 });
 
+gulp.task('lint', function() {
+  return gulp.src('client/app/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+
 // process scripts & concatenate into output file
 gulp.task('scripts', ['clean'], function() {
   gulp.src(paths.scripts, {cwd: bases.app})
