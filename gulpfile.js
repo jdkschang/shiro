@@ -1,7 +1,6 @@
 var gulp    = require('gulp'),
+    del     = require('del'),
     eslint  = require('gulp-eslint'),
-    clean   = require('gulp-clean'),
-    jshint  = require('gulp-jshint'),
     concat  = require('gulp-concat'),
     uglify  = require('gulp-uglify'),
     imgmin  = require('gulp-imagemin');
@@ -20,9 +19,14 @@ var paths   = {
               };
 
 // clean dist directory
-gulp.task('clean', function() {
-  return gulp.src(bases.dist)
-              .pipe(clean());
+gulp.task('clean:dist', function( callback ) {
+    del([
+        'dist/styles/*',
+        // here we use a globbing pattern to match everything inside the `mobile` folder
+        // 'dist/mobile/**/*',
+        // we don't want to clean this file though so we negate the pattern
+        // '!dist/mobile/deploy.json'
+      ], cb);
 });
 
 gulp.task('lint', function() {
