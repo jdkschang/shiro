@@ -43,7 +43,7 @@ gulp.task('lint', function() {
 });
 
 // process scripts & concatenate into output file
-gulp.task('scripts', ['clean'], function() {
+gulp.task('scripts', ['clean:dist'], function() {
   gulp.src(paths.scripts, {cwd: bases.app})
       .pipe(eslint())
       .pipe(eslint.format())
@@ -53,14 +53,14 @@ gulp.task('scripts', ['clean'], function() {
 });
 
 // imagemin minimizes images and outputs to dist
-gulp.task('imgmin', ['clean'], function() {
-  gulp.src(paths.images, {cwd: bases.app})
-      .pipe(imgmin())
-      .pipe(gulp.dest(bases.dist + 'images/'));
-});
+// gulp.task('imgmin', ['clean:dist'], function() {
+//   gulp.src(paths.images, {cwd: bases.app})
+//       .pipe(imgmin())
+//       .pipe(gulp.dest(bases.dist + 'images/'));
+// });
 
 // copy all other files to dist directly
-gulp.task('copy', ['clean'], function() {
+gulp.task('copy', ['clean:dist'], function() {
   // copy html
   gulp.src(paths.html, {cwd: bases.app})
       .pipe(gulp.dest(bases.dist));
