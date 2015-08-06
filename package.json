@@ -1,10 +1,10 @@
 {
-  "devDependencies": {
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-copy": "0.0.2",
-    "gulp-eslint": "^0.15.0",
-    "gulp-uglify": "^1.2.0"
-  }
+    "devDependencies": {
+        "del": "^1.2.0",
+        "gulp": "^3.9.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-copy": "0.0.2",
+        "gulp-eslint": "^0.15.0",
+        "gulp-uglify": "^1.2.0"
+    }
 }

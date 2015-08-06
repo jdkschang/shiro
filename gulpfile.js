@@ -13,7 +13,8 @@ var bases   = {
 var paths   = {
                 scripts:  ['scripts/**/*.js'],
                 styles:   ['styles/**/*.css'],
-                html:     ['index.html', '404.html'],
+                // html:     ['index.html', '404.html'],
+                html:     ['index.html'],
                 images:   ['images/**/*.png']
                 // libs:     ['scripts/libs/*.js']
               };
@@ -31,19 +32,19 @@ gulp.task('clean:dist', function( callback ) {
 
 gulp.task('lint', function() {
     return gulp.src(paths.scripts, {cwd: bases.app})
-          // eslint() attaches the lint output to the eslint property
-          // of the file object so it can be used by other modules.
-          .pipe(eslint())
-          // eslint.format() outputs the lint results to the console.
-          // Alternatively use eslint.formatEach() (see Docs).
-          .pipe(eslint.format())
-          // To have the process exit with an error code (1) on
-          // lint error, return the stream and pipe to failOnError last.
-          .pipe(eslint.failOnError());
+              // eslint() attaches the lint output to the eslint property
+              // of the file object so it can be used by other modules.
+              .pipe(eslint())
+              // eslint.format() outputs the lint results to the console.
+              // Alternatively use eslint.formatEach() (see Docs).
+              .pipe(eslint.format())
+              // To have the process exit with an error code (1) on
+              // lint error, return the stream and pipe to failOnError last.
+              .pipe(eslint.failOnError());
 });
 
 // process scripts & concatenate into output file
-gulp.task('scripts', ['clean:dist'], function() {
+gulp.task('scripts', ['clean'], function() {
     gulp.src(paths.scripts, {cwd: bases.app})
         .pipe(eslint())
         .pipe(eslint.format())
@@ -53,14 +54,14 @@ gulp.task('scripts', ['clean:dist'], function() {
 });
 
 // imagemin minimizes images and outputs to dist
-// gulp.task('imgmin', ['clean:dist'], function() {
-//   gulp.src(paths.images, {cwd: bases.app})
-//       .pipe(imgmin())
-//       .pipe(gulp.dest(bases.dist + 'images/'));
+// gulp.task('imgmin', ['clean'], function() {
+//     gulp.src(paths.images, {cwd: bases.app})
+//         .pipe(imgmin())
+//         .pipe(gulp.dest(bases.dist + 'images/'));
 // });
 
 // copy all other files to dist directly
-gulp.task('copy', ['clean:dist'], function() {
+gulp.task('copy', ['clean'], function() {
     // copy html
     gulp.src(paths.html, {cwd: bases.app})
         .pipe(gulp.dest(bases.dist));
@@ -80,4 +81,5 @@ gulp.task('watch', function() {
 });
 
 // define the default sequence of tasks
-gulp.task('default', ['clean', 'scripts', 'copy']);
+// gulp.task('default', ['clean:dist', 'scripts', 'imgmin', 'copy']);
+gulp.task('default', ['clean:dist', 'scripts', 'copy']);
