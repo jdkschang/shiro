@@ -26,7 +26,7 @@ gulp.task('clean:dist', function( callback ) {
         // 'dist/mobile/**/*',
         // we don't want to clean this file though so we negate the pattern
         // '!dist/mobile/deploy.json'
-      ], cb);
+    ], cb);
 });
 
 gulp.task('lint', function() {
@@ -44,12 +44,12 @@ gulp.task('lint', function() {
 
 // process scripts & concatenate into output file
 gulp.task('scripts', ['clean:dist'], function() {
-  gulp.src(paths.scripts, {cwd: bases.app})
-      .pipe(eslint())
-      .pipe(eslint.format())
-      .pipe(uglify())
-      .pipe(concat('app.min.js'))
-      .pipe(gulp.dest(bases.dist + 'scripts/'));
+    gulp.src(paths.scripts, {cwd: bases.app})
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(uglify())
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest(bases.dist + 'scripts/'));
 });
 
 // imagemin minimizes images and outputs to dist
@@ -61,22 +61,22 @@ gulp.task('scripts', ['clean:dist'], function() {
 
 // copy all other files to dist directly
 gulp.task('copy', ['clean:dist'], function() {
-  // copy html
-  gulp.src(paths.html, {cwd: bases.app})
-      .pipe(gulp.dest(bases.dist));
+    // copy html
+    gulp.src(paths.html, {cwd: bases.app})
+        .pipe(gulp.dest(bases.dist));
 
-  // copy styles
-  gulp.src(paths.styles, {cwd: bases.app})
-      .pipe(gulp.dest(bases.dist + 'styles'));
+    // copy styles
+    gulp.src(paths.styles, {cwd: bases.app})
+        .pipe(gulp.dest(bases.dist + 'styles'));
 
-  // copy lib scripts, maintaining original directory structure
-  // gulp.src(paths.libs, {cwd: 'app/**'})
-  //    .pipe(gulp.dest(bases.dist));
+    // copy lib scripts, maintaining original directory structure
+    // gulp.src(paths.libs, {cwd: 'app/**'})
+    //    .pipe(gulp.dest(bases.dist));
 });
 
 // observes file changes
 gulp.task('watch', function() {
-  gulp.watch('app/**/*', ['scripts', 'copy']);
+    gulp.watch('app/**/*', ['scripts', 'copy']);
 });
 
 // define the default sequence of tasks
