@@ -2,8 +2,8 @@ var gulp    = require('gulp'),
     del     = require('del'),
     eslint  = require('gulp-eslint'),
     concat  = require('gulp-concat'),
-    uglify  = require('gulp-uglify'),
-    imgmin  = require('gulp-imagemin');
+    uglify  = require('gulp-uglify');
+    // imgmin  = require('gulp-imagemin');
 
 var bases   = {
                 app: 'app/',
@@ -80,4 +80,4 @@ gulp.task('watch', function() {
 });
 
 // define the default sequence of tasks
-gulp.task('default', ['clean', 'scripts', 'imgmin', 'copy']);
+gulp.task('default', ['clean', 'scripts', 'copy']);
