@@ -22,23 +22,21 @@ var gulp    		= require('gulp'),
 	browserSync 	= require('browser-sync');
 
 // PATHS
-var paths 	= {
-	distFolder: 			'./dist/',
-	mainStyleFile: 			'./src/styles/base.scss',
-	libraryStyleFiles:		'./src/libs/**/*.scss',
-	srcStyleFiles: [
+var distFolder 				= './dist/',
+	mainStyleFile 			= './src/styles/base.scss',
+	libraryStyleFiles 		= './src/libs/**/*.scss',
+	srcStyleFiles = [
 		mainStyleFile,
 		componentStyleFiles
 	],
-	mainScriptFile: 		'./src/scripts/main.js',
-	libraryScriptFiles: 	'./src/libs/**/*.js',
-	srcScriptFiles: [
+	mainScriptFile 			= './src/scripts/main.js',
+	libraryScriptFiles 		= './src/libs/**/*.js',
+	srcScriptFiles = [
 		mainScriptFile,
 		componentScriptFiles
 	],
-	srcImageFiles: 			['./src/images/**/*.{gif,jpg,png,svg}'],
-	srcFontFiles: 			['./src/fonts/**/*.{ttf,woff,eot,svg}'],
-};
+	srcImageFiles 			= ['./src/images/**/*.{gif,jpg,png,svg}'],
+	srcFontFiles 			= ['./src/fonts/**/*.{ttf,woff,eot,svg}'];
 
 
 // ERRORS
