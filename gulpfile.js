@@ -1,29 +1,23 @@
-var gulp    = require('gulp'),
-<<<<<<< HEAD
-    jshint  = require('gulp-jshint'),
-    sass    = require('gulp-sass');
-
-gulp.task('build-css', function() {
-   return gulp.src('source/scss/**/*.scss')
-});
-
-gulp.task('default', ['watch']);
-
-gulp.task('jshint', function() {
-    return gulp.src('source/scripts/**/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
-});
-
-gulp.task('watch', function() {
-    gulp.watch('source/scripts/**/*.js', ['jshint']);
-});
-=======
-    del     = require('del'),
-    eslint  = require('gulp-eslint'),
-    concat  = require('gulp-concat'),
-    uglify  = require('gulp-uglify');
-    // imgmin  = require('gulp-imagemin');
+//////////////////////////////////////////////////
+// VARS
+//////////////////////////////////////////////////
+var gulp    		= require('gulp'),
+    del     		= require('del'),
+    eslint  		= require('gulp-eslint'),
+    concat  		= require('gulp-concat'),
+    uglify  		= require('gulp-uglify'),
+	util 			= require('gulp-util'),
+	plumber 		= require('gulp-plumber'),
+	sourcemaps 		= require('gulp-sourcemaps'),
+	sass 			= require('gulp-sass'),
+	cmq 			= require('gulp-combine-media-queries'),
+	autoprefixer 	= require('gulp-autoprefixer'),
+	minifyCSS 		= require('gulp-minify-css'),
+	modTranspiler  	= require('gulp-es6-module-transpiler'),
+	babel 			= require('gulp-babel'),
+	imagemin 		= require('gulp-imagemin'),
+	cp 				= require('child_process'),
+	browserSync 	= require('browser-sync');
 
 var bases   = {
                 app: 'app/',
@@ -103,4 +97,3 @@ gulp.task('watch', function() {
 // define the default sequence of tasks
 // gulp.task('default', ['clean:dist', 'scripts', 'imgmin', 'copy']);
 gulp.task('default', ['clean:dist', 'scripts', 'copy']);
->>>>>>> b895c01de361291c79f7d621683a6ed7c6e39635
