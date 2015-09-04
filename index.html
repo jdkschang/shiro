@@ -12,80 +12,14 @@
     <meta name="author" content="Jonathan Chang">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/makeover.css">
 
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
-    <script src="js/libs/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $(window).scroll( function() {
-                var y_scroll_pos = window.pageYOffset;
-                // scroll top arrow
-                var top_marker = 150;
-                // activates when header is fixed
-                var fixedHeader = $('.fixedheader');
-
-                if (y_scroll_pos > top_marker) {
-                    var top = 0;
-
-                    fixedHeader.css({
-                        position: 'fixed',
-                        top: top + 'px',
-                        left: 0 + 'px',
-                        right: 0 + 'px',
-                    });
-                    // displays scroll top arrow
-                    $('#scrollup').css("display", "block");
-                }
-                else if (y_scroll_pos < top_marker) {
-                    fixedHeader.css({
-                        position: 'static',
-                        top: ''
-                    });
-
-                    // removes scroll top arrow
-                    $('#scrollup').css("display", "none");
-                }
-            });
-        });
-    </script>
 </head>
 <body>
-    <div id="header-container">
-        <header class="wrapper clearfix">
-            <h1 id="title"><a href="index.html">jon ks chang</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="happy.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-
-    <div id="main-container">
-        <div id="main" class="wrapper clearfix">
-            <a href="#top" id="scrollup"></a>
-            <article>
-                <div id="red" class="column">
-                    <p>Hello there.</p>
-                </div>
-                <div id="orange" class="column">
-                    <p>If you hover</p>
-                </div>
-                <div id="yellow" class="column">
-                    <p>over each section</p>
-                </div>
-            </article>
-        </div>
-    </div>
-
-    <div id="footer-container">
-        <footer class="wrapper">
-            <h3>footer</h3>
-        </footer>
-    </div>
+<div id="makeoverContainer">
+    <span>jon ks chang</span><br/>
+    ... is getting a makeover
+</div>
 </body>
 </html>
-
