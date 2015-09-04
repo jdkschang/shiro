@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "indent": [2, "tab"],
+        "no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
+        "no-alert": 1,
+        "no-console": 1
+    },
+    "env": {
+        "browser": true
+    }
+}
