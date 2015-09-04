@@ -26,13 +26,13 @@ var distFolder 				= './dist/',
 	libraryStyleFiles 		= './src/libs/**/*.scss',
 	srcStyleFiles = [
 		mainStyleFile,
-		componentStyleFiles
+		libraryStyleFiles
 	],
 	mainScriptFile 			= './src/scripts/main.js',
 	libraryScriptFiles 		= './src/libs/**/*.js',
 	srcScriptFiles = [
 		mainScriptFile,
-		componentScriptFiles
+		libraryScriptFiles
 	],
 	srcImageFiles 			= ['./src/images/**/*.{gif,jpg,png,svg}'],
 	srcFontFiles 			= ['./src/fonts/**/*.{ttf,woff,eot,svg}'];
@@ -72,7 +72,7 @@ var customSassError = function (err) {
 //////////////////////////////////////////////////
 
 // GENERAL
-gulp.task('default', 'assets');
+gulp.task('default', ['assets']);
 gulp.task('assets', ['styles', 'scripts', 'images', 'fonts']);
 gulp.task('serve', ['default', 'browser-sync', 'watch']);
 
