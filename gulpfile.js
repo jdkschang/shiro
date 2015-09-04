@@ -4,7 +4,6 @@
 
 // IMPORTS
 var gulp    		= require('gulp'),
-    del     		= require('del'),
     eslint  		= require('gulp-eslint'),
     concat  		= require('gulp-concat'),
     uglify  		= require('gulp-uglify'),
@@ -80,7 +79,7 @@ gulp.task('serve', ['default', 'browser-sync', 'watch']);
 
 // STYLES
 gulp.task('styles', function () {
-	return gulp.src(paths.mainStyleFile)
+	return gulp.src(mainStyleFile)
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(sourcemaps.init())
 		.pipe(sass({onError: customSassError}))
@@ -89,13 +88,13 @@ gulp.task('styles', function () {
 		.pipe(autoprefixer({browsers: ['last 2 versions']}))
 		.pipe(minifyCSS())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(paths.distFolder))
+		.pipe(gulp.dest(distFolder))
 		.pipe(gulp.dest('dist/'));
 });
 
 // SCRIPTS
 gulp.task('scripts', function(){
-	return gulp.src(paths.srcScriptFiles)
+	return gulp.src(srcScriptFiles)
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(sourcemaps.init())
 		.pipe(jshint('.jshintrc'))
@@ -106,23 +105,23 @@ gulp.task('scripts', function(){
 		.pipe(concat('all.min.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(paths.distFolder))
+		.pipe(gulp.dest(distFolder))
 		.pipe(gulp.dest('dist/'));
 });
 
 // IMAGES
 gulp.task('images', function (){
-	return gulp.src(paths.srcImageFiles)
+	return gulp.src(srcImageFiles)
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(imagemin())
-		.pipe(gulp.dest(paths.distFolder + 'images'));
+		.pipe(gulp.dest(distFolder + 'images'));
 });
 
 // FONTS
 gulp.task('fonts', function() {
-	return gulp.src(paths.srcFontFiles)
+	return gulp.src(srcFontFiles)
 		.pipe(plumber({errorHandler: onError}))
-		.pipe(gulp.dest(paths.distFolder + 'fonts'));
+		.pipe(gulp.dest(distFolder + 'fonts'));
 });
 
 // BROWSERSYNC
@@ -137,11 +136,11 @@ gulp.task('browser-sync', ['default'], function() {
 
 // WATCH
 gulp.task('watch', ['default'], function () {
-	gulp.watch(paths.srcStyleFiles, ['styles', browserSync.reload]);
-	gulp.watch(paths.srcScriptFiles, ['scripts', browserSync.reload]);
-	gulp.watch(paths.srcImageFiles, ['images', browserSync.reload]);
-	gulp.watch(paths.srcFontFiles, ['fonts', browserSync.reload]);
-	gulp.watch(paths.srcMarkdownFiles, ['markdown', browserSync.reload]);
+	gulp.watch(srcStyleFiles, ['styles', browserSync.reload]);
+	gulp.watch(srcScriptFiles, ['scripts', browserSync.reload]);
+	gulp.watch(srcImageFiles, ['images', browserSync.reload]);
+	gulp.watch(srcFontFiles, ['fonts', browserSync.reload]);
+	gulp.watch(srcMarkdownFiles, ['markdown', browserSync.reload]);
 });
 
 // // clean dist directory
