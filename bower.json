@@ -1,0 +1,18 @@
+{
+	"name": "shirou",
+	"moduleType": [
+		"globals",
+		"node"
+	],
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+	}
+}

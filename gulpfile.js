@@ -55,7 +55,7 @@ var onError = function (err) {
 };
 var customSassError = function (err) {
 	var errorMessage = '';
-
+	
 	util.beep();
 
 	errorMessage += util.colors.red('\n-----------------------------------');
