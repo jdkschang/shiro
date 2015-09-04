@@ -1,6 +1,8 @@
 //////////////////////////////////////////////////
 // VARS
 //////////////////////////////////////////////////
+
+// IMPORTS
 var gulp    		= require('gulp'),
     del     		= require('del'),
     eslint  		= require('gulp-eslint'),
@@ -24,6 +26,7 @@ var bases   = {
                 dist: 'dist/'
               };
 
+// PATHS
 var paths   = {
                 scripts:  ['scripts/**/*.js'],
                 styles:   ['styles/**/*.css'],
