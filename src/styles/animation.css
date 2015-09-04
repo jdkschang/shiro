@@ -1,0 +1,29 @@
+/* responsive breakpoints */
+/* animation */
+@-webkit-keyframes $animation-name {
+  0% {
+    transform: rotate(5deg); }
+  80% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(5deg); } }
+@-moz-keyframes $animation-name {
+  0% {
+    transform: rotate(5deg); }
+  80% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(5deg); } }
+@keyframes $animation-name {
+  0% {
+    transform: rotate(5deg); }
+  80% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(5deg); } }
+.m-social .social-list i:hover:before {
+  -webkit-animation: rotate-x 3s ease .5s;
+  -moz-animation: rotate-x 3s ease .5s;
+  animation: rotate-x 3s ease .5s; }
+
+/*# sourceMappingURL=animation.css.map */
