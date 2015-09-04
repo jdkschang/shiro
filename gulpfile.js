@@ -21,20 +21,70 @@ var gulp    		= require('gulp'),
 	cp 				= require('child_process'),
 	browserSync 	= require('browser-sync');
 
-var bases   = {
-                app: 'app/',
-                dist: 'dist/'
-              };
+// var bases   = {
+//                 app: 'app/',
+//                 dist: 'dist/'
+//               };
+
 
 // PATHS
-var paths   = {
-                scripts:  ['scripts/**/*.js'],
-                styles:   ['styles/**/*.css'],
-                // html:     ['index.html', '404.html'],
-                html:     ['index.html'],
-                images:   ['images/**/*.png']
-                // libs:     ['scripts/libs/*.js']
-              };
+var paths 	= {
+	distFolder: 			'./public/dist/',
+	mainStyleFile: 			'./public/src/main.scss',
+	componentStyleFiles:	'./public/src/components/**/*.scss',
+	themeStyleFiles: 		'./public/src/theme/**/*.scss',
+	srcStyleFiles: [
+		mainStyleFile,
+		componentStyleFiles,
+		themeStyleFiles
+	],
+	mainScriptFile: 		'./public/src/main.js',
+	componentScriptFiles: 	'./public/src/components/**/*.js',
+	srcScriptFiles: [
+		mainScriptFile,
+		componentScriptFiles
+	],
+	srcImageFiles: 			['./public/src/images/**/*.{gif,jpg,png,svg}'],
+	srcFontFiles: 			['./public/src/fonts/**/*.{ttf,woff,eot,svg}'],
+	srcMarkdownFiles: [
+		'!_site/**/*',
+		'*/*.html',
+		'*/*.md',
+		'_includes/*.html',
+		'_layouts/*.html',
+		'_posts/*.md',
+		'_config.yml'
+	]
+};
+
+
+// ERRORS
+var onError = function (err) {
+	var errorMessage = '';
+
+	util.beep();
+
+	errorMessage += util.colors.red('\n-----------------------------------');
+	errorMessage += util.colors.red('\n' + err.message);
+	errorMessage += util.colors.red('\n-----------------------------------');
+	console.log(errorMessage);
+	this.emit('end');
+};
+var customSassError = function (err) {
+	var errorMessage = '';
+
+	util.beep();
+
+	errorMessage += util.colors.red('\n-----------------------------------');
+	errorMessage += util.colors.red('\n' + err.file);
+	errorMessage += util.colors.red('\n' + err.message);
+	errorMessage += util.colors.red('\nline: ' + err.line + ' col: ' + err.column);
+	errorMessage += util.colors.red('\n-----------------------------------');
+	errorMessage += '\n';
+
+	console.log(errorMessage);
+};
+
 
 // clean dist directory
 gulp.task('clean:dist', function( callback ) {
