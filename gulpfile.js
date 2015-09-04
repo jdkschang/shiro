@@ -23,21 +23,21 @@ var gulp    		= require('gulp'),
 
 // PATHS
 var paths 	= {
-	distFolder: 			'./public/dist/',
-	mainStyleFile: 			'./public/src/main.scss',
-	componentStyleFiles:	'./public/src/components/**/*.scss',
+	distFolder: 			'./dist/',
+	mainStyleFile: 			'./src/styles/base.scss',
+	libraryStyleFiles:		'./src/libs/**/*.scss',
 	srcStyleFiles: [
 		mainStyleFile,
 		componentStyleFiles
 	],
-	mainScriptFile: 		'./public/src/main.js',
-	componentScriptFiles: 	'./public/src/components/**/*.js',
+	mainScriptFile: 		'./src/scripts/main.js',
+	libraryScriptFiles: 	'./src/libs/**/*.js',
 	srcScriptFiles: [
 		mainScriptFile,
 		componentScriptFiles
 	],
-	srcImageFiles: 			['./public/src/images/**/*.{gif,jpg,png,svg}'],
-	srcFontFiles: 			['./public/src/fonts/**/*.{ttf,woff,eot,svg}'],
+	srcImageFiles: 			['./src/images/**/*.{gif,jpg,png,svg}'],
+	srcFontFiles: 			['./src/fonts/**/*.{ttf,woff,eot,svg}'],
 };
 
 
@@ -55,7 +55,7 @@ var onError = function (err) {
 };
 var customSassError = function (err) {
 	var errorMessage = '';
-	
+
 	util.beep();
 
 	errorMessage += util.colors.red('\n-----------------------------------');
@@ -92,7 +92,7 @@ gulp.task('styles', function () {
 		.pipe(minifyCSS())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(paths.distFolder))
-		.pipe(gulp.dest('_site/public/dist/'));
+		.pipe(gulp.dest('dist/'));
 });
 
 // SCRIPTS
@@ -109,7 +109,7 @@ gulp.task('scripts', function(){
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(paths.distFolder))
-		.pipe(gulp.dest('_site/public/dist/'));
+		.pipe(gulp.dest('dist/'));
 });
 
 // IMAGES
